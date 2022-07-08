@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "279489088037",
+    "project_id": "harmoniapp-f9110",
+    "storage_bucket": "harmoniapp-f9110.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279489088037:android:a4d4960a613c2b64f18dcc",
+        "android_client_info": {
+          "package_name": "com.example.harmoniapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279489088037-g2l3lmmqtfrr4vf4f0hneuapnffbu6vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGXMtLa8VHzuD-b8Adw-MBjq691nNFkVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279489088037-g2l3lmmqtfrr4vf4f0hneuapnffbu6vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
