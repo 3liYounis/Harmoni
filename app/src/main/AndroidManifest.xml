@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HarmoniApp">
         <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".AccountInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity

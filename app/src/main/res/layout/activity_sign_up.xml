@@ -8,8 +8,8 @@
     tools:context=".SignUpActivity">
 
     <LinearLayout
-        android:layout_width="328dp"
-        android:layout_height="482dp"
+        android:layout_width="401dp"
+        android:layout_height="570dp"
         android:layout_gravity="bottom"
         android:orientation="vertical"
         app:flow_horizontalAlign="center"
@@ -17,8 +17,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.773"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.652"
         tools:ignore="MissingConstraints">
 
 
@@ -34,94 +34,118 @@
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="Username:"
-            android:textColor="@color/white"
-            android:textSize="17dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="310dp"
-            android:layout_height="45dp"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="383dp"
+            android:layout_height="57dp"
             android:layout_gravity="center"
-            android:backgroundTint="@color/white"
-            android:gravity="center"
-            android:hint="HarmoniUser77"
-            android:inputType="text"
-            android:outlineProvider="none"
-            android:singleLine="true"
+            android:layout_margin="15dp"
+            android:hint="Enter Your Username"
+            android:outlineSpotShadowColor="@color/black"
             android:textColor="@color/white"
-            android:textColorHint="@android:color/darker_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="221dp" />
+            android:textColorHint="@android:color/white"
+            app:boxStrokeColor="@color/white"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/white"
+            app:startIconDrawable="@drawable/user_black24"
+            app:startIconTint="@color/black">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:textColorHint="#000000"
+                android:textCursorDrawable="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="383dp"
             android:layout_height="wrap_content"
-            android:text="Email:"
-            android:textColor="@color/white"
-            android:textSize="17dp"
-            android:textStyle="bold"
-            android:layout_margin="7dp"/>
-
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="310dp"
-            android:layout_height="45dp"
             android:layout_gravity="center"
-            android:backgroundTint="@color/white"
-            android:gravity="center"
-            android:hint="harmoniUser@example.com"
-            android:inputType="textEmailAddress"
-            android:outlineProvider="none"
-            android:singleLine="true"
+            android:layout_margin="15dp"
+            android:hint="Enter Your Email Address"
+            android:outlineSpotShadowColor="@color/black"
             android:textColor="@color/white"
-            android:textColorHint="@android:color/darker_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="221dp" />
+            android:textColorHint="@android:color/white"
+            app:boxStrokeColor="@color/white"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/white"
+            app:startIconDrawable="@drawable/email24"
+            app:startIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:textColorHint="#000000"
+                android:textCursorDrawable="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="383dp"
             android:layout_height="wrap_content"
-            android:text="Password:"
-            android:textColor="@color/white"
-            android:textSize="17dp"
-            android:textStyle="bold"
-            android:layout_margin="7dp"/>
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="310dp"
-            android:layout_height="45dp"
             android:layout_gravity="center"
-            android:backgroundTint="@color/white"
-            android:gravity="center"
-            android:hint="••••••••••••••••••••••••••••"
-            android:inputType="textPassword"
-            android:outlineProvider="none"
-            android:singleLine="true"
+            android:layout_margin="15dp"
+            android:layout_marginStart="16dp"
+            android:hint="Enter Your Phone Number"
+            android:outlineSpotShadowColor="@color/black"
             android:textColor="@color/white"
-            android:textColorHint="@android:color/darker_gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" tools:layout_editor_absoluteY="221dp" />
+            android:textColorHint="@android:color/white"
+            app:boxStrokeColor="@color/white"
+            app:counterEnabled="true"
+            app:counterMaxLength="10"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black"
+            app:hintTextColor="@color/white"
+            app:startIconDrawable="@drawable/phone24"
+            app:startIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="phone"
+                android:textColorHint="#000000"
+                android:textCursorDrawable="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:hint="Enter Your Password"
+            android:outlineSpotShadowColor="@color/black"
+            android:textColor="@color/white"
+            android:textColorHint="@android:color/white"
+            app:boxStrokeColor="@color/white"
+            app:hintTextColor="@color/white"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black"
+            app:startIconDrawable="@drawable/lock24"
+            app:startIconTint="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#000000"
+                android:textCursorDrawable="@color/white" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/signUp"
-            style="@style/TextAppearance.AppCompat.Small.Inverse"
             android:layout_width="215dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -136,12 +160,29 @@
             tools:layout_editor_absoluteX="58dp"
             tools:layout_editor_absoluteY="201dp" />
 
+        <Button
+            android:id="@+id/google_signUp"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/sky_blue"
+            android:drawableLeft="@drawable/google_32"
+            android:elevation="8dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:text="Sign Up with Google"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="88dp"
+            tools:layout_editor_absoluteY="494dp" />
+
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="284dp"
-        android:layout_height="201dp"
+        android:layout_width="289dp"
+        android:layout_height="115dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
