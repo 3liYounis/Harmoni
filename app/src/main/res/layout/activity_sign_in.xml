@@ -18,13 +18,14 @@
         app:srcCompat="@drawable/harmoni_logo" />
 
     <LinearLayout
-        android:layout_width="355dp"
-        android:layout_height="472dp"
+        android:layout_width="361dp"
+        android:layout_height="560dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.703"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -32,7 +33,7 @@
             android:layout_width="211dp"
             android:layout_height="57dp"
             android:layout_gravity="center"
-            android:layout_margin="17dp"
+            android:layout_margin="10dp"
             android:gravity="center"
             android:text="Signing In ⬇️"
             android:textColor="@android:color/white"
@@ -43,18 +44,18 @@
             tools:layout_editor_absoluteY="111dp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="355dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="15dp"
+            android:layout_margin="10dp"
             android:hint="Enter Your Email Address"
-            android:outlineSpotShadowColor="@color/black"
             android:textColor="@color/white"
-            android:textColorHint="@android:color/white"
             app:boxStrokeColor="@color/white"
             app:endIconMode="clear_text"
             app:endIconTint="@color/black"
+            app:helperTextTextColor="@color/Red"
             app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/email24"
             app:startIconTint="@color/black">
@@ -64,21 +65,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="15"
-                android:textColorHint="#000000"
+                android:inputType="textEmailAddress"
                 android:textCursorDrawable="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="355dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="15dp"
+            android:layout_margin="10dp"
             android:hint="Enter Your Password"
-            android:outlineSpotShadowColor="@color/black"
             android:textColor="@color/white"
-            android:textColorHint="@android:color/white"
             app:boxStrokeColor="@color/white"
+            app:helperTextTextColor="@color/Red"
             app:hintTextColor="@color/white"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/black"
@@ -91,7 +92,6 @@
                 android:layout_height="match_parent"
                 android:ems="15"
                 android:inputType="textPassword"
-                android:textColorHint="#000000"
                 android:textCursorDrawable="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,17 +100,16 @@
             android:id="@+id/forgotPassword"
             android:layout_width="138dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Forgot Password?"
             android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:layout_gravity="center" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/signIn"
             android:layout_width="202dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
             android:backgroundTint="@android:color/white"
             android:outlineAmbientShadowColor="@color/black"
             android:text="Sign In 😁"
@@ -127,7 +126,6 @@
             android:layout_width="201dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
             android:backgroundTint="@color/white"
             android:outlineAmbientShadowColor="@color/black"
             android:text="Sign Up ⬆️"
@@ -142,7 +140,6 @@
             android:layout_width="229dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_margin="5dp"
             android:backgroundTint="@color/sky_blue"
             android:drawableLeft="@drawable/google_32"
             android:elevation="8dp"

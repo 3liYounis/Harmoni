@@ -1,11 +1,15 @@
 package com.example.harmoniapp;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,6 +33,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
     Button signIn,signUp,google;
     TextView forgotPassword;
+    TextInputLayout emailLayout, passwordLayout;
     TextInputEditText email,password;
     FirebaseAuth mAuth ;
     FirebaseUser firebaseCurrentUser;
@@ -57,6 +62,8 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         forgotPassword = findViewById(R.id.forgotPassword);
+        emailLayout = findViewById(R.id.emailLayout);
+        passwordLayout = findViewById(R.id.passwordLayout);
         signIn.setOnClickListener(this);
         signUp.setOnClickListener(this);
         google.setOnClickListener(this);
@@ -106,19 +113,24 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                             it.putExtra("PHONENUMBER",firebaseCurrentUser.getPhoneNumber());
                             startActivity(it);
                         }
-                        else {
-                            Toast.makeText(SignInActivity.this, "Sorry authentication failed.", Toast.LENGTH_SHORT).show();
-                        }
                     }
                 });
     }
 
     public void onClick(View view) {
         if(view == signIn){
-            if (email != null && password != null)
+            if (email.getText().toString().isEmpty()){
+                emailLayout.setError("Enter an existing account Email !");
+            }
+            if (password.getText().toString().isEmpty()){
+                passwordLayout.setError("Enter the password ! ");
+            }
+            if (!email.getText().toString().isEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()){
+                emailLayout.setError("Enter a valid Email !");
+                email.requestFocus();
+            }
+            if (!email.getText().toString().isEmpty() && !password.getText().toString().isEmpty())
                 signIn(email.getText().toString(),password.getText().toString());
-            else
-                Toast.makeText(SignInActivity.this, "Please Enter the full details",Toast.LENGTH_SHORT).show();
         }
         if (view == signUp){
             Intent it = new Intent(this,SignUpActivity.class);
@@ -149,9 +161,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                                     it.putExtra("PHONENUMBER",firebaseCurrentUser.getPhoneNumber());
                                     startActivity(it);
                                 }
-                            } else {
-                                Toast.makeText(SignInActivity.this, "No account found with details entered 😔",
-                                        Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                emailLayout.setError("No existing account matches your input :(");
+                                passwordLayout.setError("No existing account matches your input :(");
                             }
                         }
                     });

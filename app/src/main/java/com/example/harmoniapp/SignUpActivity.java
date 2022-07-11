@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,6 +29,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     Button signUp,google;
+    TextInputLayout nameLayout,emailLayout,passwordLayout,phoneNumberLayout;
     TextInputEditText name,email,password,phoneNumber;
     FirebaseAuth mAuth;
     FirebaseUser firebaseCurrentUser;
@@ -55,6 +58,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         phoneNumber = findViewById(R.id.phoneNumber);
+        nameLayout = findViewById(R.id.nameLayout);
+        emailLayout = findViewById(R.id.emailLayout);
+        passwordLayout = findViewById(R.id.passwordLayout);
+        phoneNumberLayout = findViewById(R.id.phoneNumberLayout);
         signUp.setOnClickListener(this);
         google.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
@@ -70,10 +77,29 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         if (view == signUp){
-            if (password.getText().length() < 6 || password.getText().toString().contains("!") == false && password.getText().toString().contains("@") == false && password.getText().toString().contains("#") == false &&  password.getText().toString().contains("$")== false){
-                Toast.makeText(this,"Weak Password ❌",Toast.LENGTH_LONG).show();
+            if (name.getText().toString().isEmpty()){
+                nameLayout.setError("Enter a Username !");
             }
-            else{
+            if (email.getText().toString().isEmpty()){
+                emailLayout.setError("Enter an Email !");
+            }
+            if (!email.getText().toString().isEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()){
+                emailLayout.setError("Enter a valid Email !");
+                email.requestFocus();
+            }
+            if (phoneNumber.getText().toString().isEmpty()){
+                phoneNumberLayout.setError("Enter a Phone Number !");
+            }
+            if (phoneNumber.getText().toString().length() != 10 && !phoneNumber.getText().toString().isEmpty()){
+                phoneNumberLayout.setError("Enter a valid Phone Number !");
+            }
+            if (password.getText().toString().isEmpty()){
+                passwordLayout.setError("Enter the password ! ");
+            }
+            if (password.getText().length() < 8 && !password.getText().toString().isEmpty()){
+                passwordLayout.setError("Enter a strong password ! [0-9]/[!-+] ");
+            }
+            if (password.getText().length() > 8 && phoneNumber.getText().toString().length()==10 &&Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches() ){
                 createAccount(email.getText().toString(),password.getText().toString());
             }
         }
