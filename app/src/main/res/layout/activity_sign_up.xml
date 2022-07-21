@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fashion_green"
+    android:background="@color/black"
     tools:context=".SignUpActivity">
 
     <LinearLayout
@@ -19,8 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.36"
         tools:ignore="MissingConstraints">
 
 
@@ -44,15 +42,16 @@
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:hint="Enter Your Username"
-            android:outlineSpotShadowColor="@color/black"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white"
             android:textColor="@color/white"
             app:boxStrokeColor="@color/white"
             app:endIconMode="clear_text"
-            app:endIconTint="@color/black"
+            app:endIconTint="@color/white"
             app:helperTextTextColor="@color/Red"
             app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/user_black24"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name"
@@ -77,7 +76,7 @@
             app:helperTextTextColor="@color/Red"
             app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/email24"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
@@ -86,6 +85,7 @@
                 android:ems="15"
                 android:inputType="textEmailAddress"
                 android:textCursorDrawable="@color/white" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -108,7 +108,7 @@
             app:helperTextTextColor="@color/Red"
             app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/phone24"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phoneNumber"
@@ -135,7 +135,7 @@
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/black"
             app:startIconDrawable="@drawable/lock24"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password"
@@ -155,7 +155,7 @@
             android:outlineAmbientShadowColor="@color/black"
             android:text="Sign Up ⬆️"
             android:textAllCaps="false"
-            android:textColor="@color/fashion_green"
+            android:textColor="@color/black"
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
@@ -177,14 +177,11 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="277dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="210dp"
+        android:layout_height="91dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/harmoni_logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

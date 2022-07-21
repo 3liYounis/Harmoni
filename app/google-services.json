@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "279489088037",
+    "firebase_url": "https://harmoniapp-f9110-default-rtdb.firebaseio.com",
     "project_id": "harmoniapp-f9110",
     "storage_bucket": "harmoniapp-f9110.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "279489088037-d44h6pjlg2cb9h9vc69u12ib5sahukts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.harmoniapp",
+            "certificate_hash": "65744f41b0ee05d75fbfa91f2745d69f7f2183fd"
+          }
+        },
         {
           "client_id": "279489088037-g2l3lmmqtfrr4vf4f0hneuapnffbu6vd.apps.googleusercontent.com",
           "client_type": 3

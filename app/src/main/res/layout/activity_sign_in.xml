@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fashion_green"
+    android:background="@color/black"
     tools:context=".SignInActivity">
 
     <ImageView
@@ -14,8 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/harmoni_logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="361dp"
@@ -54,11 +53,11 @@
             android:textColor="@color/white"
             app:boxStrokeColor="@color/white"
             app:endIconMode="clear_text"
-            app:endIconTint="@color/black"
+            app:endIconTint="@color/white"
             app:helperTextTextColor="@color/Red"
             app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/email24"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
@@ -79,12 +78,13 @@
             android:hint="Enter Your Password"
             android:textColor="@color/white"
             app:boxStrokeColor="@color/white"
+            app:placeholderTextColor="@color/white"
             app:helperTextTextColor="@color/Red"
             app:hintTextColor="@color/white"
             app:passwordToggleEnabled="true"
-            app:passwordToggleTint="@color/black"
+            app:passwordToggleTint="@color/white"
             app:startIconDrawable="@drawable/lock24"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password"
@@ -110,11 +110,11 @@
             android:layout_width="202dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="@color/white"
             android:outlineAmbientShadowColor="@color/black"
             android:text="Sign In 😁"
             android:textAllCaps="false"
-            android:textColor="@color/fashion_green"
+            android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +130,7 @@
             android:outlineAmbientShadowColor="@color/black"
             android:text="Sign Up ⬆️"
             android:textAllCaps="false"
-            android:textColor="@color/fashion_green"
+            android:textColor="@color/black"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="88dp"
             tools:layout_editor_absoluteY="494dp" />
