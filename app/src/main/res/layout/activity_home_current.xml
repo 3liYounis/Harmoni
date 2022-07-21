@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+
+    <Button
+        android:id="@+id/main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Track Name"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/side_activity1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Side activity 1"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/side_activity2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Side activity 2"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/side_activity3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Side activity 3"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/side_activity4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Side activity 4"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+</LinearLayout>
