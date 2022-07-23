@@ -13,12 +13,15 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.regex.Pattern;
 
 public class ForgotPassword extends AppCompatActivity implements View.OnClickListener{
-    EditText email;
+    TextInputLayout emailLayout;
+    TextInputEditText email;
     Button resetPassword;
     ProgressBar progressBar;
     FirebaseAuth mAuth;
@@ -29,6 +32,7 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
         getSupportActionBar().hide();
         mAuth = FirebaseAuth.getInstance();
         email = findViewById(R.id.email);
+        emailLayout = findViewById(R.id.emailLayout);
         resetPassword = findViewById(R.id.resetPassword);
         progressBar = findViewById(R.id.progressBar);
         resetPassword.setOnClickListener(this);
@@ -41,13 +45,13 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
     }
     private void resetPassword(String recoverEmail){
         if (recoverEmail.isEmpty()){
-            email.setError("Please enter your email!");
-            email.requestFocus();
+            emailLayout.setError("Please enter your email!");
+            emailLayout.requestFocus();
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(recoverEmail).matches()){
-            email.setError("Please enter a valid email");
-            email.requestFocus();
+            emailLayout.setError("Please enter a valid email");
+            emailLayout.requestFocus();
             return;
         }
         progressBar.setVisibility(View.VISIBLE);

@@ -1,11 +1,16 @@
 package com.example.harmoniapp;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +31,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
     Button signUp,google;
@@ -33,6 +43,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     TextInputEditText name,email,password,phoneNumber;
     FirebaseAuth mAuth;
     FirebaseUser firebaseCurrentUser;
+    FirebaseDatabase database;
+    DatabaseReference ref;
     GoogleSignInClient mGoogleSignInClient;
     final static int RC_SIGN_IN = 258;
     @Override
@@ -65,6 +77,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         signUp.setOnClickListener(this);
         google.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        ref = database.getReference("Users");
         createRequest();
     }
     private void createRequest() {
@@ -100,7 +114,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 passwordLayout.setError("Enter a strong password ! [0-9]/[!-+] ");
             }
             if (password.getText().length() > 8 && phoneNumber.getText().toString().length()==10 &&Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches() ){
-                createAccount(email.getText().toString(),password.getText().toString());
+                createAccount(name.getText().toString(),email.getText().toString(),password.getText().toString(),null,0,0);
             }
         }
         if (view == google){
@@ -133,12 +147,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            firebaseCurrentUser = mAuth.getCurrentUser();
-                            Intent it = new Intent(SignUpActivity.this, AccountInfoActivity.class);
-                            it.putExtra("NAME",firebaseCurrentUser.getDisplayName());
-                            it.putExtra("EMAIL",firebaseCurrentUser.getEmail());
-                            it.putExtra("PHONENUMBER",phoneNumber.getText());
-                            startActivity(it);
+                            firebaseCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
+                            if (firebaseCurrentUser != null){
+                                writeInDataBase(firebaseCurrentUser.getUid(), acct.getDisplayName(),acct.getEmail(),"GooglePass",acct.getPhotoUrl().toString(),0,0);
+                            }
                         }
                         else {
                             Toast.makeText(SignUpActivity.this, "Sorry authentication failed.", Toast.LENGTH_SHORT).show();
@@ -146,7 +158,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 });
     }
-    public void createAccount(String email, String password){
+    public void createAccount(String name, String email, String password, String profilePic, int coins, int activitiesDone){
         if (email != null && password != null){
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -155,11 +167,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             if (task.isSuccessful()) {
                                 firebaseCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
                                 if (firebaseCurrentUser != null){
-                                    Intent it = new Intent(SignUpActivity.this, AccountInfoActivity.class);
-                                    it.putExtra("NAME",name.getText().toString());
-                                    it.putExtra("EMAIL",firebaseCurrentUser.getEmail());
-                                    it.putExtra("PHONENUMBER",phoneNumber.getText().toString());
-                                    startActivity(it);
+                                    writeInDataBase(firebaseCurrentUser.getUid(), name,email,password,profilePic,coins,activitiesDone);
                                 }
                             }
                             else {
@@ -169,5 +177,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                         }
                     });
         }
+    }
+    public void writeInDataBase(String uId,String name, String email, String password, String profilePic, int coins, int activitiesDone){
+        HarmoniUser user = new HarmoniUser(firebaseCurrentUser.getUid(),name,email,password,profilePic,coins,activitiesDone);
+        ref.setValue(user);
+        Intent it = new Intent(SignUpActivity.this, AccountInfoActivity.class);
+        startActivity(it);
     }
 }

@@ -148,5 +148,15 @@
     <color name="DarkBlue">#00008B</color>
     <color name="Navy">#000080</color>
     <color name="Black">#000000</color>
+    <color name="Harmoni_Purple">#7C58B0</color>
+    <color name="Harmoni_Blue">#4EB0B1</color>
+    <color name="Harmoni_Orange">#FCB064</color>
+    <color name="Harmoni_Red">#ED6A5E</color>
+
+
+
+
+
+
 
 </resources>

@@ -15,14 +15,13 @@ public class HomeActivity extends AppCompatActivity implements  View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_current);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_home_current);
         main_activity = findViewById(R.id.main_activity);
         side_activity1 = findViewById(R.id.side_activity1);
         side_activity2 = findViewById(R.id.side_activity2);
         side_activity3 = findViewById(R.id.side_activity3);
         side_activity4 = findViewById(R.id.side_activity4);
-
         main_activity.setOnClickListener(this);
 
 

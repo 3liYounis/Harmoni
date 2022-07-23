@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-tools:context=".MissionViewActivity">
+tools:context=".MissionViewActivity"
+    android:background="@color/white">
 
 
 <!--- A try to do the progress bar>
@@ -30,5 +31,6 @@ tools:context=".MissionViewActivity">
         android:id="@+id/DoneActivityButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="I'm Done!" />
+        android:text="I'm Done!"
+        android:backgroundTint="@color/Red"/>
 </LinearLayout>
