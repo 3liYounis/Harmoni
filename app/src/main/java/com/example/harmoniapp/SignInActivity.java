@@ -40,18 +40,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
     GoogleSignInClient mGoogleSignInClient;
     final static int RC_SIGN_IN = 258;
     @Override
-    protected void onStart() {
-        super.onStart();
-//        firebaseCurrentUser = mAuth.getCurrentUser();
-//        if(firebaseCurrentUser!=null){
-//            Intent it = new Intent(SignInActivity.this, AccountInfoActivity.class);
-//            it.putExtra("NAME",firebaseCurrentUser.getDisplayName());
-//            it.putExtra("EMAIL",firebaseCurrentUser.getEmail());
-//            it.putExtra("PHONENUMBER",firebaseCurrentUser.getPhoneNumber());
-//            startActivity(it);
-//        }
-    }
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
@@ -108,9 +96,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                         if (task.isSuccessful()) {
                             firebaseCurrentUser = mAuth.getCurrentUser();
                             Intent it = new Intent(SignInActivity.this, AccountInfoActivity.class);
-                            it.putExtra("NAME",firebaseCurrentUser.getDisplayName());
-                            it.putExtra("EMAIL",firebaseCurrentUser.getEmail());
-                            it.putExtra("PHONENUMBER",firebaseCurrentUser.getPhoneNumber());
                             startActivity(it);
                         }
                     }
@@ -155,10 +140,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                                 firebaseCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
                                 if (firebaseCurrentUser != null){
                                     Intent it = new Intent(SignInActivity.this, AccountInfoActivity.class);
-                                    // DISPLAYY NAME && PHONE NUMBER !!!
-                                    it.putExtra("NAME",firebaseCurrentUser.getEmail().substring(0,4));
-                                    it.putExtra("EMAIL",firebaseCurrentUser.getEmail());
-                                    it.putExtra("PHONENUMBER",firebaseCurrentUser.getPhoneNumber());
                                     startActivity(it);
                                 }
                             }

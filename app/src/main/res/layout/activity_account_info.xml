@@ -7,49 +7,37 @@
     android:background="@color/white"
     tools:context=".AccountInfoActivity">
 
-    <Button
-        android:id="@+id/home"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/Harmoni_Red"
-        android:text="Home 🏠"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        tools:ignore="MissingConstraints" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="414dp"
-        android:layout_height="66dp"
+        android:layout_width="413dp"
+        android:layout_height="111dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toTopOf="@+id/profilePic">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="235dp"
+            android:layout_height="106dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/harmoni_logo" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="351dp"
-        android:layout_height="391dp"
+        android:layout_width="359dp"
+        android:layout_height="286dp"
         android:layout_marginBottom="88dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="295dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -65,12 +53,12 @@
 
             <TextView
                 android:id="@+id/name"
-                android:layout_width="wrap_content"
+                android:layout_width="188dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Ali Younis"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="55px" />
+                android:textSize="33px" />
 
         </LinearLayout>
 
@@ -78,7 +66,7 @@
             android:layout_width="295dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -94,12 +82,12 @@
 
             <TextView
                 android:id="@+id/email"
-                android:layout_width="wrap_content"
+                android:layout_width="232dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="aliyounis642@gmail.com"
+                android:layout_marginTop="7dp"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="55px" />
+                android:textSize="30px" />
 
         </LinearLayout>
 
@@ -107,7 +95,7 @@
             android:layout_width="295dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -123,12 +111,12 @@
 
             <TextView
                 android:id="@+id/coins"
-                android:layout_width="wrap_content"
+                android:layout_width="148dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="9999"
+                android:layout_marginTop="7dp"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="55px" />
+                android:textSize="40px" />
 
         </LinearLayout>
 
@@ -136,8 +124,8 @@
             android:layout_width="295dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/activitiesImageView"
@@ -152,12 +140,12 @@
 
             <TextView
                 android:id="@+id/activitiesDone"
-                android:layout_width="wrap_content"
+                android:layout_width="144dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="8888"
+                android:layout_marginTop="7dp"
+                android:text=""
                 android:textColor="@color/black"
-                android:textSize="55px" />
+                android:textSize="40px" />
 
         </LinearLayout>
     </LinearLayout>
@@ -166,10 +154,22 @@
         android:id="@+id/profilePic"
         android:layout_width="171dp"
         android:layout_height="166dp"
-        android:src="@drawable/harmoni_icon"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/home"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/Harmoni_Red"
+        android:text="Log out 🚪"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="239dp"
+        tools:layout_editor_absoluteY="18dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

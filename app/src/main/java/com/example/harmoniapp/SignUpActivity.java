@@ -48,18 +48,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     GoogleSignInClient mGoogleSignInClient;
     final static int RC_SIGN_IN = 258;
     @Override
-    protected void onStart() {
-        super.onStart();
-//        firebaseCurrentUser = mAuth.getCurrentUser();
-//        if(firebaseCurrentUser!=null){
-//            Intent it = new Intent(SignUpActivity.this, AccountInfoActivity.class);
-//            it.putExtra("NAME",firebaseCurrentUser.getDisplayName());
-//            it.putExtra("EMAIL",firebaseCurrentUser.getEmail());
-//            it.putExtra("PHONENUMBER",phoneNumber.getText());
-//            startActivity(it);
-//        }
-    }
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
@@ -69,11 +57,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        phoneNumber = findViewById(R.id.phoneNumber);
         nameLayout = findViewById(R.id.nameLayout);
         emailLayout = findViewById(R.id.emailLayout);
         passwordLayout = findViewById(R.id.passwordLayout);
-        phoneNumberLayout = findViewById(R.id.phoneNumberLayout);
         signUp.setOnClickListener(this);
         google.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
@@ -97,24 +83,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             if (email.getText().toString().isEmpty()){
                 emailLayout.setError("Enter an Email !");
             }
-            if (!email.getText().toString().isEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()){
-                emailLayout.setError("Enter a valid Email !");
-                email.requestFocus();
-            }
-            if (phoneNumber.getText().toString().isEmpty()){
-                phoneNumberLayout.setError("Enter a Phone Number !");
-            }
-            if (phoneNumber.getText().toString().length() != 10 && !phoneNumber.getText().toString().isEmpty()){
-                phoneNumberLayout.setError("Enter a valid Phone Number !");
-            }
             if (password.getText().toString().isEmpty()){
                 passwordLayout.setError("Enter the password ! ");
             }
             if (password.getText().length() < 8 && !password.getText().toString().isEmpty()){
                 passwordLayout.setError("Enter a strong password ! [0-9]/[!-+] ");
             }
-            if (password.getText().length() > 8 && phoneNumber.getText().toString().length()==10 &&Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches() ){
-                createAccount(name.getText().toString(),email.getText().toString(),password.getText().toString(),null,0,0);
+            if (password.getText().length() > 8 && Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches() ){
+                createAccount(name.getText().toString(),email.getText().toString(),password.getText().toString(),"",0,0);
             }
         }
         if (view == google){
@@ -171,8 +147,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                 }
                             }
                             else {
-                                Toast.makeText(SignUpActivity.this, "Authentication failed.",
-                                        Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, task.getException().getMessage(),
+                                        Toast.LENGTH_LONG).show();
                             }
                         }
                     });
@@ -180,7 +156,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
     public void writeInDataBase(String uId,String name, String email, String password, String profilePic, int coins, int activitiesDone){
         HarmoniUser user = new HarmoniUser(firebaseCurrentUser.getUid(),name,email,password,profilePic,coins,activitiesDone);
-        ref.setValue(user);
+        ref.child(uId).setValue(user);
         Intent it = new Intent(SignUpActivity.this, AccountInfoActivity.class);
         startActivity(it);
     }

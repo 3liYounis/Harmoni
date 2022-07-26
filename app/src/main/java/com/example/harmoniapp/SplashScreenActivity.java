@@ -6,8 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-public class SplashScreenActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+public class SplashScreenActivity extends AppCompatActivity {
+    FirebaseUser firebaseCurrentUser;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,8 +20,15 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent it = new Intent(SplashScreenActivity.this, SignInActivity.class);
-                startActivity(it);
+                firebaseCurrentUser = mAuth.getCurrentUser();
+                if(firebaseCurrentUser!=null){
+                    Intent it = new Intent(SplashScreenActivity.this, AccountInfoActivity.class);
+                    startActivity(it);
+                }
+                else{
+                    Intent it = new Intent(SplashScreenActivity.this, SignInActivity.class);
+                    startActivity(it);
+                }
             }
         },2000);
     }

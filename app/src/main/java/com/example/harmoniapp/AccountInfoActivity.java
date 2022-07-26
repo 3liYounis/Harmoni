@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,15 +18,18 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import java.util.HashMap;
 
 public class AccountInfoActivity extends AppCompatActivity implements View.OnClickListener {
     TextView name,email,coins,activitiesDone;
     Button home;
     FirebaseAuth mAuth;
     FirebaseUser firebaseCurrentUser;
-    HarmoniUser harmoniUser;
     FirebaseDatabase database;
     DatabaseReference ref;
+    ImageView profilePic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,22 +42,63 @@ public class AccountInfoActivity extends AppCompatActivity implements View.OnCli
         name = findViewById(R.id.name);
         email = findViewById(R.id.email);
         coins = findViewById(R.id.coins);
+        profilePic = findViewById(R.id.profilePic);
         activitiesDone = findViewById(R.id.activitiesDone);
         home = findViewById(R.id.home);
         home.setOnClickListener(this);
-        email.setText(firebaseCurrentUser.getEmail());
-        ref.addValueEventListener(new ValueEventListener() {
+        ref.child(firebaseCurrentUser.getUid()).child("userName").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot ds : snapshot.getChildren()){
-                    if (ds.child("uId").toString().equals(firebaseCurrentUser.getUid())){
-                        name.setText(ds.child("userName").toString());
-                        email.setText(ds.child("email").toString());
-                        coins.setText(ds.child("coins").toString());
-                        activitiesDone.setText(ds.child("activitiesDone").toString());
-                    }
-                }
+                name.setText(snapshot.getValue(String.class));
             }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        ref.child(firebaseCurrentUser.getUid()).child("email").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                email.setText(snapshot.getValue(String.class));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        ref.child(firebaseCurrentUser.getUid()).child("coins").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                coins.setText(snapshot.getValue(Integer.class).toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").setValue(X);
+                activitiesDone.setText(snapshot.getValue(Integer.class).toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        ref.child(firebaseCurrentUser.getUid()).child("profilePic").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String profilePicLink = snapshot.getValue(String.class);
+                if (!profilePicLink.equals(""))
+                    Picasso.get().load(profilePicLink).into(profilePic);
+            }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -63,7 +108,8 @@ public class AccountInfoActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View view) {
         if (view == home){
-            Intent it = new Intent(AccountInfoActivity.this, HomeActivity.class);
+            mAuth.signOut();
+            Intent it = new Intent(AccountInfoActivity.this, SignInActivity.class);
             startActivity(it);
         }
     }
