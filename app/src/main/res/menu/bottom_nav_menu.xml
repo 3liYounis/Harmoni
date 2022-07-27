@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Progress"
+        android:icon="@drawable/activity32"
+        android:id="@+id/ProgressButton" />
+    <item android:title="Home"
+        android:id="@+id/HomeButton"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:title="Achievements"
+        android:id="@+id/AchievementsButton"
+        android:icon="@drawable/ic_baseline_redeem_24"/>
+</menu>

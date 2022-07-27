@@ -1,13 +1,9 @@
 package com.example.harmoniapp;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -95,7 +91,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             firebaseCurrentUser = mAuth.getCurrentUser();
-                            Intent it = new Intent(SignInActivity.this, AccountInfoActivity.class);
+                            Intent it = new Intent(SignInActivity.this, TracksActivity.class);
                             startActivity(it);
                         }
                     }
@@ -139,7 +135,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                                 mAuth.getUid();
                                 firebaseCurrentUser = FirebaseAuth.getInstance().getCurrentUser();
                                 if (firebaseCurrentUser != null){
-                                    Intent it = new Intent(SignInActivity.this, AccountInfoActivity.class);
+                                    Intent it = new Intent(SignInActivity.this, TracksActivity.class);
                                     startActivity(it);
                                 }
                             }

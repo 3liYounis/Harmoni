@@ -22,7 +22,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             public void run() {
                 firebaseCurrentUser = mAuth.getCurrentUser();
                 if(firebaseCurrentUser!=null){
-                    Intent it = new Intent(SplashScreenActivity.this, AccountInfoActivity.class);
+                    Intent it = new Intent(SplashScreenActivity.this, TracksActivity.class);
                     startActivity(it);
                 }
                 else{
@@ -30,6 +30,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                     startActivity(it);
                 }
             }
-        },2000);
+        },1000);
     }
 }

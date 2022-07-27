@@ -30,6 +30,7 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
         getSupportActionBar().hide();
+        getSupportActionBar().hide();
         mAuth = FirebaseAuth.getInstance();
         email = findViewById(R.id.email);
         emailLayout = findViewById(R.id.emailLayout);
