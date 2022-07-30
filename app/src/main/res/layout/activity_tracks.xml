@@ -7,37 +7,26 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".TracksActivity"
-    android:background="@color/white">
+    android:background="@color/black">
 
-
-    <Button
-        android:id="@+id/signOut"
-        android:layout_width="58dp"
-        android:layout_height="16dp"
-        android:backgroundTint="@color/white"
-        android:gravity="center"
-        android:text="📍"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="413dp"
-        android:layout_height="111dp"
+        android:layout_width="411dp"
+        android:layout_height="147dp"
+        android:backgroundTint="@color/black"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="235dp"
-            android:layout_height="106dp"
+            android:layout_width="602dp"
+            android:layout_height="162dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/harmoni_logo" />
+
 
     </LinearLayout>
 
@@ -75,7 +64,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/fashion_green"
+        android:background="@color/DarkGray"
         app:menu="@menu/bottom_nav_menu"/>
 
     <LinearLayout
@@ -97,7 +86,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Choose a Track!"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20dp"
             android:textStyle="bold" />
 

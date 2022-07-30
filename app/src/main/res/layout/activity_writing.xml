@@ -7,21 +7,23 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".WritingActivity"
-    android:background="@color/white">
+    android:background="@color/black">
 
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="413dp"
-        android:layout_height="111dp"
+        android:layout_width="411dp"
+        android:layout_height="147dp"
+        android:backgroundTint="@color/black"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="235dp"
-            android:layout_height="106dp"
+            android:layout_width="602dp"
+            android:layout_height="162dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/harmoni_logo" />
 
@@ -37,7 +39,8 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <TextView
             android:id="@+id/WritingIntro"
@@ -45,7 +48,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Reflect ... Think and Improve ❤️‍🩹"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="22dp"
             android:textStyle="bold" />
 
@@ -55,27 +58,26 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Write on a paper what was the most enjoyable part today and how can you make it better in the future."
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="17dp" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/writing128"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/writing128" />
 
         <Button
             android:id="@+id/DoneWritingAct"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@color/Harmoni_Red"
             android:gravity="center"
             android:text="I'm Done!"
-            android:textSize="20sp"
-            android:layout_marginTop="10dp"
             android:textColor="@color/white"
-            />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -86,7 +88,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/Harmoni_Red"
+        android:background="@color/DarkGray"
         app:menu="@menu/bottom_nav_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

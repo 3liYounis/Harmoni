@@ -73,6 +73,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             if (email.getText().toString().isEmpty()){
                 emailLayout.setError("Enter an Email !");
             }
+            if (!email.getText().toString().isEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()){
+                emailLayout.setError("Enter a valid Email !");
+                email.requestFocus();
+            }
             if (password.getText().toString().isEmpty()){
                 passwordLayout.setError("Enter the password ! ");
             }

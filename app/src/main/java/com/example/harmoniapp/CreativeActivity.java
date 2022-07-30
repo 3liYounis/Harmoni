@@ -11,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 
 public class CreativeActivity extends AppCompatActivity implements View.OnClickListener {
     Button charlie,reflect;
-    BottomNavigationItemView ProgressButton, TracksButton, AchievementsButton;
+    BottomNavigationItemView progressMap, dashBoard, achievements,account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,10 +19,14 @@ public class CreativeActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_creative);
         charlie = findViewById(R.id.charlie);
         reflect = findViewById(R.id.reflect);
-        TracksButton = findViewById(R.id.HomeButton);
-        ProgressButton = findViewById(R.id.ProgressButton);
-        TracksButton.setOnClickListener(this);
-        ProgressButton.setOnClickListener(this);
+        dashBoard = findViewById(R.id.dashBoard);
+        progressMap = findViewById(R.id.progressMap);
+        achievements = findViewById(R.id.goalsAchieved);
+        account = findViewById(R.id.account);
+        dashBoard.setOnClickListener(this);
+        progressMap.setOnClickListener(this);
+        achievements.setOnClickListener(this);
+        account.setOnClickListener(this);
         charlie.setOnClickListener(this);
         reflect.setOnClickListener(this);
     }
@@ -37,11 +41,11 @@ public class CreativeActivity extends AppCompatActivity implements View.OnClickL
             Intent it = new Intent(this,WritingActivity.class);
             startActivity(it);
         }
-        if (view == ProgressButton) {
+        if (view == progressMap) {
             Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
             startActivity(ProgressButtonIntent);
         }
-        if (view == TracksButton) {
+        if (view == dashBoard) {
             Intent ProgressButtonIntent = new Intent(this, TracksActivity.class);
             startActivity(ProgressButtonIntent);
         }

@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 public class WritingActivity extends AppCompatActivity implements View.OnClickListener {
     Button DoneWritingAct;
     TextView SideActivityName, WritingActQuo;
-    BottomNavigationItemView ProgressButton, HomeButton, AchievementsButton;
+    BottomNavigationItemView dashBoard, progressMap, achievements,account;
     static  int updateCounter =0;
 
 
@@ -34,13 +34,15 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
         DoneWritingAct = findViewById(R.id.DoneWritingAct);
         SideActivityName = findViewById(R.id.SideActivityName);
         WritingActQuo = findViewById(R.id.WritingActQuo);
-        ProgressButton = findViewById(R.id.ProgressButton);
-        HomeButton = findViewById(R.id.HomeButton);
-        AchievementsButton = findViewById(R.id.AchievementsButton);
-
-        HomeButton.setOnClickListener(this);
         DoneWritingAct.setOnClickListener(this);
-        ProgressButton.setOnClickListener(this);
+        dashBoard = findViewById(R.id.dashBoard);
+        progressMap = findViewById(R.id.progressMap);
+        achievements = findViewById(R.id.goalsAchieved);
+        account = findViewById(R.id.account);
+        dashBoard.setOnClickListener(this);
+        progressMap.setOnClickListener(this);
+        achievements.setOnClickListener(this);
+        account.setOnClickListener(this);
     }
 
 
@@ -48,11 +50,11 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        if (view == HomeButton) {
+        if (view == dashBoard) {
             Intent HomeButtonIntent = new Intent(this, TracksActivity.class);
             startActivity(HomeButtonIntent);
         }
-        if (view == ProgressButton) {
+        if (view == progressMap) {
             Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
             startActivity(ProgressButtonIntent);
         }

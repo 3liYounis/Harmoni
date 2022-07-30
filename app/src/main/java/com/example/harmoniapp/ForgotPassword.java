@@ -35,7 +35,6 @@ public class ForgotPassword extends AppCompatActivity implements View.OnClickLis
         email = findViewById(R.id.email);
         emailLayout = findViewById(R.id.emailLayout);
         resetPassword = findViewById(R.id.resetPassword);
-        progressBar = findViewById(R.id.progressBar);
         resetPassword.setOnClickListener(this);
     }
     @Override

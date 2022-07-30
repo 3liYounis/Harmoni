@@ -5,22 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProgressActivity"
-    android:background="@color/white">
+    android:background="@color/black">
 
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="413dp"
-        android:layout_height="111dp"
+        android:layout_width="411dp"
+        android:layout_height="147dp"
+        android:backgroundTint="@color/black"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="235dp"
-            android:layout_height="106dp"
+            android:layout_width="602dp"
+            android:layout_height="162dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/harmoni_logo" />
 
@@ -35,7 +36,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.761"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent">
 
 
@@ -58,19 +59,20 @@
             android:gravity="center"
             android:inputType="text"
             android:text="Progress on Your Track:"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="28sp" />
 
 
         <ProgressBar
             android:id="@+id/Track1ProgressBar"
             style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
+            android:layout_width="373dp"
             android:layout_height="wrap_content"
             android:max="100"
             android:progress="0"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="79dp" />
+            tools:layout_editor_absoluteY="79dp"
+            android:layout_marginTop="40dp"/>
 
 
     </LinearLayout>
@@ -82,7 +84,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/Harmoni_Orange"
+        android:background="@color/DarkGray"
         app:menu="@menu/bottom_nav_menu"/>
 
 

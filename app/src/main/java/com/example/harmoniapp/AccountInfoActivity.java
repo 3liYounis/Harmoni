@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,11 +19,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import java.util.HashMap;
-
 public class AccountInfoActivity extends AppCompatActivity implements View.OnClickListener {
     TextView name,email,coins,activitiesDone;
-    Button home;
+    Button logout;
     FirebaseAuth mAuth;
     FirebaseUser firebaseCurrentUser;
     FirebaseDatabase database;
@@ -44,8 +41,8 @@ public class AccountInfoActivity extends AppCompatActivity implements View.OnCli
         coins = findViewById(R.id.coins);
         profilePic = findViewById(R.id.profilePic);
         activitiesDone = findViewById(R.id.activitiesDone);
-        home = findViewById(R.id.home);
-        home.setOnClickListener(this);
+        logout = findViewById(R.id.logout);
+        logout.setOnClickListener(this);
         ref.child(firebaseCurrentUser.getUid()).child("userName").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -107,7 +104,7 @@ public class AccountInfoActivity extends AppCompatActivity implements View.OnCli
     }
     @Override
     public void onClick(View view) {
-        if (view == home){
+        if (view == logout){
             mAuth.signOut();
             Intent it = new Intent(AccountInfoActivity.this, SignInActivity.class);
             startActivity(it);

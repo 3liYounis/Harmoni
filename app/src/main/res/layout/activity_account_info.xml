@@ -4,20 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/black"
     tools:context=".AccountInfoActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="413dp"
-        android:layout_height="111dp"
+        android:layout_width="411dp"
+        android:layout_height="147dp"
+        android:backgroundTint="@color/black"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/profilePic">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="235dp"
-            android:layout_height="106dp"
+            android:layout_width="602dp"
+            android:layout_height="162dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/harmoni_logo" />
 
@@ -25,19 +28,19 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="359dp"
-        android:layout_height="286dp"
-        android:layout_marginBottom="88dp"
+        android:layout_width="394dp"
+        android:layout_height="354dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePic">
 
         <LinearLayout
             android:layout_width="295dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -57,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="33px" />
 
         </LinearLayout>
@@ -66,7 +69,7 @@
             android:layout_width="295dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -86,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="30px" />
 
         </LinearLayout>
@@ -95,7 +98,7 @@
             android:layout_width="295dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -115,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="40px" />
 
         </LinearLayout>
@@ -124,7 +127,7 @@
             android:layout_width="295dp"
             android:layout_height="45dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -144,32 +147,41 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
                 android:text=""
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="40px" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/Harmoni_Red"
+            android:text="🚨 Log Out 🚨"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/profilePic"
         android:layout_width="171dp"
         android:layout_height="166dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        android:src="@drawable/harmoni_icon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    <Button
-        android:id="@+id/home"
-        android:layout_width="150dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:backgroundTint="@color/Harmoni_Red"
-        android:text="Log out 🚪"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="239dp"
-        tools:layout_editor_absoluteY="18dp" />
+        android:background="@color/DarkGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
