@@ -39,6 +39,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
+
         <TextView
             android:id="@+id/WritingIntro"
             android:layout_width="match_parent"

@@ -6,7 +6,7 @@
         android:id="@+id/ProgressButton" />
     <item android:title="Home"
         android:id="@+id/HomeButton"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:icon="@drawable/home" />
     <item android:title="Achievements"
         android:id="@+id/AchievementsButton"
         android:icon="@drawable/ic_baseline_redeem_24"/>

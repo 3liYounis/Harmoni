@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class WritingActivity extends AppCompatActivity implements View.OnClickListener {
     Button DoneWritingAct;
-    TextView SideActivityName, WritingActQuo;
+    TextView WritingActivityName, WritingActQuo;
     BottomNavigationItemView ProgressButton, HomeButton, AchievementsButton;
     static  int updateCounter =0;
 
@@ -32,7 +32,7 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_writing);
         getSupportActionBar().hide();
         DoneWritingAct = findViewById(R.id.DoneWritingAct);
-        SideActivityName = findViewById(R.id.SideActivityName);
+        WritingActivityName = findViewById(R.id.WritingActivityName);
         WritingActQuo = findViewById(R.id.WritingActQuo);
         ProgressButton = findViewById(R.id.ProgressButton);
         HomeButton = findViewById(R.id.HomeButton);
