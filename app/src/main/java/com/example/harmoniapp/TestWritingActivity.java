@@ -28,8 +28,7 @@ TextView WritingActivityName, WritingActQuo;
     @Override
     public void onClick(View view) {
         if (view == GoodButton) {
-          String GoodButtonValue = (String) GoodButton.getText();
-            AutofillValue autofillValue = EmotionName.getAutofillValue(GoodButtonValue);
+
         }
     }
 }
