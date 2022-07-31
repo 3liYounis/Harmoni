@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-tools:context=".WritingActivity"
+    tools:context=".TestWritingActivity"
     android:background="@color/white">
 
     <FrameLayout
@@ -15,10 +15,7 @@ tools:context=".WritingActivity"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
@@ -26,86 +23,148 @@ tools:context=".WritingActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/black"
+        android:background="@color/WhiteSmoke"
         app:menu="@menu/bottom_nav_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:ignore="ExtraText">
-
-
-    <TextView
-        android:id="@+id/SideActivityName"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:gravity="center"
-        android:inputType="text"
-        android:text="Writing to express them feels!"
-        android:textSize="20sp" />
+        tools:ignore="ExtraText">
 
-    <TextView
-        android:id="@+id/WritingActQuo"
-        android:ems="10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:inputType="text"
-        android:lines="2"
-        android:text="How was your Day?">
 
-    </TextView>
-
-    <RadioGroup
-        android:id="@+id/RadioEmoGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/WeirdButton"
-            android:layout_width="117dp"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="weird" />
-
-        <RadioButton
-            android:id="@+id/BadButton"
-            android:layout_width="112dp"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="bad" />
-
-        <RadioButton
-            android:id="@+id/MehButton"
-            android:layout_width="106dp"
-            android:layout_height="wrap_content"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="meh" />
-
-        <RadioButton
-            android:id="@+id/GoodButton"
+        <TextView
+            android:id="@+id/SideActivityName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="good"
-            android:scaleX="1"
-            android:scaleY="1" />
-    </RadioGroup>
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="Writing to express them feels!"
+            android:textSize="30dp"
+            android:layout_marginBottom="10dp"/>
 
-    <Button
-        android:id="@+id/ContinueButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Continue" />
+        <TextView
+            android:id="@+id/WritingActQuo"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="text"
+            android:lines="2"
+            android:text="How was your Day?"
+            android:layout_marginBottom="10dp"/>
 
-</LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/EmotionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="false"
+            android:editable="false"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <RadioGroup
+            android:id="@+id/RadioEmoGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/WeirdButton"
+                android:layout_width="93dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="weird"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/BadButton"
+                android:layout_width="93dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="bad"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/MehButton"
+                android:layout_width="93dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:outlineAmbientShadowColor="@color/black"
+                android:padding="10dp"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="meh"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/GoodButton"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:text="good"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/harmoni_gradient"
+                android:outlineAmbientShadowColor="@color/black"
+                android:button="@drawable/button_style"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                />
+        </RadioGroup>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/continue1"
+                android:layout_width="126dp"
+                android:layout_height="51dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:text="Continue"
+                android:textColor="@color/black" />
+            <ImageButton
+                android:id="@+id/ContinueButton"
+                android:layout_width="222dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/harmoni_gradient"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
