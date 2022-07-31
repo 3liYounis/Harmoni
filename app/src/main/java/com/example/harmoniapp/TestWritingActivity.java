@@ -18,7 +18,7 @@ EditText EmotionName;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_writing);
         GoodButton = findViewById(R.id.GoodButton);
-        EmotionName = findViewById(R.id.EmotionName);
+        //EmotionName = findViewById(R.id.EmotionName);
 
     }
 
