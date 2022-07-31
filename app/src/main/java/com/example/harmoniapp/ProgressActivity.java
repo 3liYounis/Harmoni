@@ -24,7 +24,7 @@ public class ProgressActivity extends AppCompatActivity implements View.OnClickL
     TextView ProgressHeadline, ProgressTrack;
     ProgressBar Track1ProgressBar;
     ImageView animated;
-    BottomNavigationItemView ProgressButton, HomeButton, AchievementsButton;
+    BottomNavigationItemView dashBoard, progressMap, achievements,account;
     FirebaseAuth mAuth;
     FirebaseUser firebaseCurrentUser;
     FirebaseDatabase database;
@@ -41,12 +41,15 @@ public class ProgressActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_progress);
         Track1ProgressBar = findViewById(R.id.Track1ProgressBar);
         ProgressHeadline = findViewById(R.id.ProgressHeadline);
-        HomeButton = findViewById(R.id.HomeButton);
-        AchievementsButton= findViewById(R.id.AchievementsButton);
-        ProgressButton = findViewById(R.id.ProgressButton);
+        dashBoard = findViewById(R.id.dashBoard);
+        progressMap = findViewById(R.id.progressMap);
+        achievements = findViewById(R.id.goalsAchieved);
+        account = findViewById(R.id.account);
+        dashBoard.setOnClickListener(this);
+        progressMap.setOnClickListener(this);
+        achievements.setOnClickListener(this);
+        account.setOnClickListener(this);
         animated = findViewById(R.id.animated);
-        HomeButton.setOnClickListener(this);
-        ProgressButton.setOnClickListener(this);
         ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -67,11 +70,11 @@ public class ProgressActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
-        if (view == HomeButton) {
+        if (view == dashBoard) {
             Intent HomeButtonIntent = new Intent(this, TracksActivity.class);
             startActivity(HomeButtonIntent);
         }
-        if (view == ProgressButton) {
+        if (view == progressMap) {
             Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
             startActivity(ProgressButtonIntent);
         }

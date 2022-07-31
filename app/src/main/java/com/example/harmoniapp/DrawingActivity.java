@@ -21,8 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class DrawingActivity extends AppCompatActivity implements View.OnClickListener {
     Button DoneDoodlingAct;
-    TextView DoodlingIntro, InstructionsDoodlingAct;
-    BottomNavigationItemView ProgressButton, HomeButton, AchievementsButton;
+    BottomNavigationItemView dashBoard, progressMap, achievements,account;
     static  int updateCounter =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,24 +29,24 @@ public class DrawingActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_drawing);
         getSupportActionBar().hide();
         DoneDoodlingAct = findViewById(R.id.DoneDoodlingAct);
-        DoodlingIntro = findViewById(R.id.DoodlingIntro);
-        InstructionsDoodlingAct = findViewById(R.id.InstructionsDoodlingAct);
-        ProgressButton = findViewById(R.id.ProgressButton);
-        AchievementsButton = findViewById(R.id.AchievementsButton);
-        HomeButton = findViewById(R.id.HomeButton);
+        dashBoard = findViewById(R.id.dashBoard);
+        progressMap = findViewById(R.id.progressMap);
+        achievements = findViewById(R.id.goalsAchieved);
+        account = findViewById(R.id.account);
+        dashBoard.setOnClickListener(this);
+        progressMap.setOnClickListener(this);
+        achievements.setOnClickListener(this);
+        account.setOnClickListener(this);
         DoneDoodlingAct.setOnClickListener(this);
-        HomeButton.setOnClickListener(this);
-        ProgressButton.setOnClickListener(this);
-
     }
 
     @Override
     public void onClick(View view) {
-        if (view == HomeButton) {
+        if (view == dashBoard) {
             Intent HomeButtonIntent = new Intent(this, TracksActivity.class);
             startActivity(HomeButtonIntent);
         }
-        if (view == ProgressButton) {
+        if (view == progressMap) {
             Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
             startActivity(ProgressButtonIntent);
         }

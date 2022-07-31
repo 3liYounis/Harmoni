@@ -12,30 +12,29 @@ import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class TracksActivity extends AppCompatActivity implements  View.OnClickListener {
-    Button mindfulness, creative, sport, music,signOut;
-    TextView TrackName;
+    Button mindfulness, creative, sport, music;
     FirebaseAuth mAuth;
 
-    BottomNavigationItemView ProgressButton, HomeButton, AchievementsButton;
+    BottomNavigationItemView dashBoard, progressMap, achievements,account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_tracks);
-        TrackName = findViewById(R.id.TrackName);
         mindfulness = findViewById(R.id.WritingAct);
         creative = findViewById(R.id.DoodlingAct);
         sport = findViewById(R.id.DancingAct);
         music = findViewById(R.id.JammingAct);
-        ProgressButton = findViewById(R.id.ProgressButton);
-        AchievementsButton = findViewById(R.id.AchievementsButton);
-        HomeButton = findViewById(R.id.HomeButton);
-        signOut = findViewById(R.id.signOut);
-        signOut.setOnClickListener(this);
-        ProgressButton.setOnClickListener(this);
+        dashBoard = findViewById(R.id.dashBoard);
+        progressMap = findViewById(R.id.progressMap);
+        achievements = findViewById(R.id.goalsAchieved);
+        account = findViewById(R.id.account);
+        dashBoard.setOnClickListener(this);
+        progressMap.setOnClickListener(this);
+        achievements.setOnClickListener(this);
+        account.setOnClickListener(this);
         mindfulness.setOnClickListener(this);
-        HomeButton.setOnClickListener(this);
         creative.setOnClickListener(this);
         music.setOnClickListener(this);
         sport.setOnClickListener(this);
@@ -55,12 +54,7 @@ public class TracksActivity extends AppCompatActivity implements  View.OnClickLi
 
     @Override
     public void onClick(View view) {
-        if (view == signOut){
-            mAuth.signOut();
-            Intent ProgressButtonIntent = new Intent(this, SplashScreenActivity.class);
-            startActivity(ProgressButtonIntent);
-        }
-        if (view == ProgressButton) {
+        if (view == progressMap) {
             Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
             startActivity(ProgressButtonIntent);
         }
