@@ -34,7 +34,7 @@ public class CreativeActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         if (view == charlie){
-            Intent it = new Intent(this,DrawingActivity.class);
+            Intent it = new Intent(this, DrawingActivity.class);
             startActivity(it);
         }
         if (view == reflect){

@@ -75,10 +75,10 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
             Intent progressMapIntent = new Intent(this, ProgressActivity.class);
             startActivity(progressMapIntent);
         }
-        if (view == ContinueButton) {
-            Intent ContinueButtonIntent = new Intent(this, WritingTask2Activity.class);
-            startActivity(ContinueButtonIntent);
-        }
+//        if (view == ContinueButton) {
+//            Intent ContinueButtonIntent = new Intent(this, WritingTask2Activity.class);
+//            startActivity(ContinueButtonIntent);
+//        }
         if (view == GoodButton) {
             Blank.setText("Good");
         }
