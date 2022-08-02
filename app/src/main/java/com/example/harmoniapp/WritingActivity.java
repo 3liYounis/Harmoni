@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,10 +23,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class WritingActivity extends AppCompatActivity implements View.OnClickListener {
-    Button DoneWritingAct;
-    TextView SideActivityName, WritingActQuo;
     BottomNavigationItemView dashBoard, progressMap, achievements,account;
-    static  int updateCounter =0;
+    RadioButton WeirdButton, BadButton, MehButton , GoodButton;
+    TextView FillInBlank1, FillInBlank2;
+    EditText Blank;
+    ImageButton ContinueButton;
+
 
 
     @Override
@@ -31,18 +36,30 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing);
         getSupportActionBar().hide();
-        DoneWritingAct = findViewById(R.id.DoneWritingAct);
-        SideActivityName = findViewById(R.id.SideActivityName);
-        WritingActQuo = findViewById(R.id.WritingActQuo);
-        DoneWritingAct.setOnClickListener(this);
+        ContinueButton =  findViewById(R.id.ContinueButton);
         dashBoard = findViewById(R.id.dashBoard);
         progressMap = findViewById(R.id.progressMap);
         achievements = findViewById(R.id.goalsAchieved);
         account = findViewById(R.id.account);
+        WeirdButton = findViewById(R.id.WeirdButton);
+        GoodButton = findViewById(R.id.GoodButton);
+        BadButton = findViewById(R.id.BadButton);
+        MehButton = findViewById(R.id.MehButton);
+        FillInBlank1 = findViewById(R.id.FillinBlank1);
+        FillInBlank2 = findViewById(R.id.FillinBlank2);
+        Blank =  findViewById(R.id.Blank);
+
+
+        GoodButton.setOnClickListener(this);
+        WeirdButton.setOnClickListener(this);
+        BadButton.setOnClickListener(this);
+        MehButton.setOnClickListener(this);
         dashBoard.setOnClickListener(this);
         progressMap.setOnClickListener(this);
         achievements.setOnClickListener(this);
         account.setOnClickListener(this);
+        ContinueButton.setOnClickListener(this);
+
     }
 
 
@@ -51,40 +68,46 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View view) {
         if (view == dashBoard) {
-            Intent HomeButtonIntent = new Intent(this, TracksActivity.class);
-            startActivity(HomeButtonIntent);
+            Intent dashBoardIntent = new Intent(this, TracksActivity.class);
+            startActivity(dashBoardIntent);
         }
         if (view == progressMap) {
-            Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
-            startActivity(ProgressButtonIntent);
+            Intent progressMapIntent = new Intent(this, ProgressActivity.class);
+            startActivity(progressMapIntent);
         }
-        if (view == DoneWritingAct) {
-            updateDatabaseActDone();
-            updateCounter=0;
-            Intent ProgressButtonIntent = new Intent(this, CreativeActivity.class);
-            startActivity(ProgressButtonIntent);
+        if (view == ContinueButton) {
+            Intent ContinueButtonIntent = new Intent(this, WritingTask2Activity.class);
+            startActivity(ContinueButtonIntent);
         }
-    }
-    public void updateDatabaseActDone(){
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref = database.getReference("Users");
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseUser firebaseCurrentUser = mAuth.getCurrentUser();
-        ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").addValueEventListener(new ValueEventListener() {
-        @Override
-        public void onDataChange(@NonNull DataSnapshot snapshot) {
-            if (updateCounter == 0){
-                int actDone = snapshot.getValue(Integer.class);
-                ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").setValue(actDone+1);
-                updateCounter++;
-            }
+        if (view == GoodButton) {
+            Blank.setText("Good");
         }
-        @Override
-        public void onCancelled(@NonNull DatabaseError error) {
+        if (view == WeirdButton) {
+            Blank.setText("Weird");
 
         }
-        });
+        if (view == BadButton) {
+            Blank.setText("Bad");
+        }
+        if (view == MehButton) {
+            Blank.setText("Meh");
+        }
+
+        String Good = "Good";
+        String Meh = "Meh";
+        String Weird = "Weird";
+        String Bad = "Bad";
+        Intent ResultIntent = new Intent(this, WritingTask3Activity.class);
+        startActivity(ResultIntent);
+        ResultIntent.putExtra("GOOD",Good);
+        ResultIntent.putExtra("WEIRD",Weird);
+        ResultIntent.putExtra("BAD",Bad);
+        ResultIntent.putExtra("MEH",Meh);
+        startActivity(ResultIntent);
+
+
     }
+
 }
 
 

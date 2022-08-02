@@ -31,25 +31,25 @@
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="411dp"
-        android:layout_height="434dp"
+        android:layout_width="405dp"
+        android:layout_height="530dp"
         android:layout_marginBottom="80dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/WritingIntro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Reflect ... Think and Improve ❤️‍🩹"
+            android:text="Express your feelings"
             android:textColor="@color/white"
-            android:textSize="22dp"
+            android:textSize="30dp"
             android:textStyle="bold" />
 
         <TextView
@@ -57,27 +57,136 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Write on a paper what was the most enjoyable part today and how can you make it better in the future."
+            android:text="Fill in the blanks according to your current mood !"
             android:textColor="@color/white"
-            android:textSize="17dp" />
+            android:textSize="15dp" />
 
-        <ImageView
-            android:id="@+id/imageView4"
+        <LinearLayout
+            android:layout_width="405dp"
+            android:layout_height="141dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fillinBlank1"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+                android:inputType="text"
+                android:lines="2"
+                android:text="Yesterday I had a"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+
+            <EditText
+                android:id="@+id/Blank"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:editable="false"
+                android:ems="10"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/Harmoni_Pink"
+                android:textSize="22dp" />
+
+            <TextView
+                android:id="@+id/FillinBlank2"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:inputType="text"
+                android:lines="2"
+                android:text="day"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+        </LinearLayout>
+
+
+        <RadioGroup
+            android:id="@+id/RadioEmoGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/writing128" />
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/DoneWritingAct"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/Harmoni_Red"
-            android:gravity="center"
-            android:text="I'm Done!"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            <RadioButton
+                android:id="@+id/WeirdButton"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="weird"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/BadButton"
+                android:layout_width="93dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
+                android:outlineAmbientShadowColor="@color/black"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="bad"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/MehButton"
+                android:layout_width="93dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
+                android:outlineAmbientShadowColor="@color/black"
+                android:padding="10dp"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="meh"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/GoodButton"
+                android:layout_width="89dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
+                android:outlineAmbientShadowColor="@color/black"
+                android:padding="10dp"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="good"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+        </RadioGroup>
+
+
+        <ImageButton
+            android:id="@+id/ContinueButton"
+            android:layout_width="188dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/harmoni_gradient"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
 
     </LinearLayout>
 

@@ -154,11 +154,7 @@
     <color name="Harmoni_Red">#ED6A5E</color>
     <color name="Harmoni_Green">#32CD32</color>
     <color name="mtrl_textinput_default_box_stroke_color" tool:override="true">#FFFFFF</color>
-
-
-
-
-
+    <color name="Harmoni_Pink">#d87cf8</color>
 
 
 </resources>

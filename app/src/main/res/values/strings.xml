@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Harmoni</string>
     <string name="todo">TODO</string>
+    <string name="good">Good</string>
 </resources>

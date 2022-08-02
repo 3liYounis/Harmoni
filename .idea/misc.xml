@@ -30,8 +30,29 @@
         <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_progress.xml" value="0.3625" />
         <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.186" />
         <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1935" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/drawable/harmoni_gradient.xml" value="0.1165" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_account_info.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_creative.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_dancing.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_drawing.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_forgot_password.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_jamming.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_mission_view.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_progress.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_in.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_up.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_splash_screen.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_test_writing.xml" value="0.12986111111111112" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_tracks.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing_task2.xml" value="0.1" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing_task3.xml" value="0.1" />
       </map>
     </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://relaxng.org/ns/compatibility/annotations/1.0" location="$PROJECT_DIR$" />
+    <resource url="http://schemas.android.com/apk/res/android" location="$PROJECT_DIR$" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

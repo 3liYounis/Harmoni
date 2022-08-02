@@ -9,18 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HarmoniApp">
-        <activity android:name=".SignInActivity"></activity>
-        <activity android:name=".SignUpActivity"></activity>
-        <activity android:name=".AccountInfoActivity"></activity>
-        <activity android:name=".TracksActivity"></activity>
-        <activity android:name=".DrawingActivity"></activity>
-        <activity android:name=".DancingActivity"></activity>
-        <activity android:name=".ForgotPassword"></activity>
-        <activity android:name=".Jamming"></activity>
-        <activity android:name=".MissionViewActivity"></activity>
-        <activity android:name=".ProgressActivity"></activity>
-        <activity android:name=".WritingActivity"></activity>
-        <activity android:name=".CreativeActivity"></activity>
+        <activity
+            android:name=".WritingTask3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".WritingTask2Activity"
+            android:exported="false" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".AccountInfoActivity" />
+        <activity android:name=".TracksActivity" />
+        <activity android:name=".DrawingActivity" />
+        <activity android:name=".DancingActivity" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".Jamming" />
+        <activity android:name=".MissionViewActivity" />
+        <activity android:name=".ProgressActivity" />
+        <activity android:name=".WritingActivity" />
+        <activity android:name=".TestWritingActivity" />
+        <activity
+            android:name=".CreativeActivity"
+            android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">

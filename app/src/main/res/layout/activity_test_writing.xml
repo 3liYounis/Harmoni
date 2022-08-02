@@ -5,34 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".TestWritingActivity"
-    android:background="@color/white">
+    tools:context=".TestWritingActivity">
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/WhiteSmoke"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/WhiteSmoke"
         app:menu="@menu/bottom_nav_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:id="@+id/linearLayout9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ExtraText">
 
 
@@ -40,45 +47,56 @@
             android:id="@+id/SideActivityName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:ems="10"
             android:gravity="center"
             android:inputType="text"
             android:text="Writing to express them feels!"
-            android:textSize="30dp"
-            android:layout_marginBottom="10dp"/>
+            android:textSize="30dp" />
 
         <TextView
-            android:id="@+id/WritingActQuo"
-            android:textSize="20dp"
+            android:id="@+id/FillinBlank1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:inputType="text"
             android:lines="2"
-            android:text="How was your Day?"
-            android:layout_marginBottom="10dp"/>
+            android:text="Yesterday I had a"
+            android:textSize="25dp" />
 
 
-        <EditText
-            android:id="@+id/EmotionName"
+        <TextView
+            android:id="@+id/Blank"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:duplicateParentState="false"
-            android:editable="false"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:gravity="center"
+            android:text=""
+            android:textSize="25dp"/>
+        <TextView
+            android:id="@+id/FillinBlank2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:inputType="text"
+            android:lines="2"
+            android:text="Day"
+            android:textSize="25dp" />
 
         <RadioGroup
             android:id="@+id/RadioEmoGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/WeirdButton"
-                android:layout_width="93dp"
-                android:layout_height="match_parent"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/harmoni_gradient"
@@ -93,10 +111,10 @@
                 android:id="@+id/BadButton"
                 android:layout_width="93dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/harmoni_gradient"
-                android:button="@drawable/button_style"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
                 android:outlineAmbientShadowColor="@color/black"
                 android:scaleX="1"
                 android:scaleY="1"
@@ -108,10 +126,10 @@
                 android:id="@+id/MehButton"
                 android:layout_width="93dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/harmoni_gradient"
-                android:button="@drawable/button_style"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:background="@drawable/harmoni_gradient"
+                android:button="@drawable/button_style"
                 android:outlineAmbientShadowColor="@color/black"
                 android:padding="10dp"
                 android:scaleX="1"
@@ -122,24 +140,27 @@
 
             <RadioButton
                 android:id="@+id/GoodButton"
-                android:layout_width="93dp"
-                android:layout_height="wrap_content"
-                android:text="good"
-                android:scaleX="1"
-                android:scaleY="1"
+                android:layout_width="89dp"
+                android:layout_height="49dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:background="@drawable/harmoni_gradient"
-                android:outlineAmbientShadowColor="@color/black"
                 android:button="@drawable/button_style"
+                android:outlineAmbientShadowColor="@color/black"
                 android:padding="10dp"
-                android:textColor="@color/black"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:text="good"
                 android:textAlignment="center"
-                />
+                android:textColor="@color/black" />
         </RadioGroup>
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/continue1"
                 android:layout_width="126dp"
@@ -148,13 +169,16 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:textAlignment="center"
                 android:text="Continue"
-                android:textColor="@color/black" />
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
             <ImageButton
                 android:id="@+id/ContinueButton"
-                android:layout_width="222dp"
-                android:layout_height="47dp"
+                android:layout_width="188dp"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="10dp"
@@ -162,7 +186,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/black" />
 
-        </FrameLayout>
+        </LinearLayout>
 
 
     </LinearLayout>
