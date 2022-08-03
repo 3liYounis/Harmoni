@@ -75,35 +75,43 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
             Intent progressMapIntent = new Intent(this, ProgressActivity.class);
             startActivity(progressMapIntent);
         }
-//        if (view == ContinueButton) {
-//            Intent ContinueButtonIntent = new Intent(this, WritingTask2Activity.class);
-//            startActivity(ContinueButtonIntent);
-//        }
+        if (view == account) {
+            Intent accountIntent = new Intent(this, ProgressActivity.class);
+            startActivity(accountIntent);
+        }
+        if (view == ContinueButton) {
+            Intent ContinueButtonIntent = new Intent(this, WritingTask2Activity.class);
+            startActivity(ContinueButtonIntent);
+        }
+        Intent it = new Intent(this,WritingTask3Activity.class);
         if (view == GoodButton) {
             Blank.setText("Good");
+            it.putExtra("CHOICE","good");
+            startActivity(it);
         }
         if (view == WeirdButton) {
             Blank.setText("Weird");
-
+            it.putExtra("CHOICE","weird");
+            startActivity(it);
         }
         if (view == BadButton) {
             Blank.setText("Bad");
+            it.putExtra("CHOICE","bad");
+            startActivity(it);
+
         }
         if (view == MehButton) {
             Blank.setText("Meh");
+            it.putExtra("CHOICE","meh");
+            startActivity(it);
         }
 
-        String Good = "Good";
-        String Meh = "Meh";
-        String Weird = "Weird";
-        String Bad = "Bad";
-        Intent ResultIntent = new Intent(this, WritingTask3Activity.class);
-        startActivity(ResultIntent);
-        ResultIntent.putExtra("GOOD",Good);
-        ResultIntent.putExtra("WEIRD",Weird);
-        ResultIntent.putExtra("BAD",Bad);
-        ResultIntent.putExtra("MEH",Meh);
-        startActivity(ResultIntent);
+
+
+
+
+
+
 
 
     }

@@ -20,16 +20,17 @@
             <TextView
                 android:id="@+id/InstructionsWritingAct"
                 android:layout_width="match_parent"
-                android:layout_height="93dp"
+                android:layout_height="88dp"
                 android:text="Write 3 examples of your feelings:"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
+
             <LinearLayout
-                android:layout_width="390dp"
-                android:layout_height="wrap_content"
+                android:layout_width="330dp"
+                android:layout_height="61dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -48,23 +49,17 @@
                 <TextView
                     android:id="@+id/Blank"
                     android:layout_width="70dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginBottom="10dp"
+                    android:editable="false"
                     android:ems="10"
                     android:gravity="center"
                     android:text=""
-                    android:textColor="@color/Harmoni_Pink"
+                    android:textColor="@color/Aqua"
                     android:textSize="22dp" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
 
             </LinearLayout>
-
 
             <TextView
                 android:id="@+id/fillinBlank2"
@@ -81,7 +76,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="310dp"
-                android:layout_height="165dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="15dp"
                 android:outlineSpotShadowColor="@color/white"
@@ -92,11 +87,16 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Edittext1"
-                    android:layout_width="310dp"
-                    android:layout_height="122dp"
-                    android:ems="15"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/white" />
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:hint="E.g: Full of activities, Rewarding, etc.. "
+                    android:outlineSpotShadowColor="@color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    app:hintTextColor="@color/white" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
 

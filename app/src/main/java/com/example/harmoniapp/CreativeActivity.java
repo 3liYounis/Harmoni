@@ -49,5 +49,9 @@ public class CreativeActivity extends AppCompatActivity implements View.OnClickL
             Intent ProgressButtonIntent = new Intent(this, TracksActivity.class);
             startActivity(ProgressButtonIntent);
         }
+        if (view == account) {
+            Intent accountIntent = new Intent(this, ProgressActivity.class);
+            startActivity(accountIntent);
+        }
     }
 }

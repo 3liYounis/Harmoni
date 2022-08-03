@@ -46,7 +46,7 @@
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/Harmoni_Blue"
             android:gravity="center"
-            android:text="Drawing Charlie 📍"
+            android:text="DOODLING"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -58,7 +58,7 @@
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/Harmoni_Red"
             android:gravity="center"
-            android:text="Reflect on your day 🪞 "
+            android:text="JOURNAlLING "
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20sp" />

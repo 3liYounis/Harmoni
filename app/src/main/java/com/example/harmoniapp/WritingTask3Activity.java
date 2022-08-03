@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -23,6 +24,7 @@ public class WritingTask3Activity extends AppCompatActivity implements View.OnCl
     TextView InstructionsWritingAct, fillinBlank1 ,fillinBlank2, Blank;
     EditText Edittext1;
     ImageButton DoneWritingAct;
+    BottomNavigationItemView progressMap, dashBoard, achievements,account;
     static  int updateCounter =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,19 +36,18 @@ public class WritingTask3Activity extends AppCompatActivity implements View.OnCl
         fillinBlank1 = findViewById(R.id.fillinBlank1);
         fillinBlank2 = findViewById(R.id.fillinBlank2);
         Blank =  findViewById(R.id.Blank);
-
+        dashBoard = findViewById(R.id.dashBoard);
+        progressMap = findViewById(R.id.progressMap);
+        achievements = findViewById(R.id.goalsAchieved);
+        account = findViewById(R.id.account);
+        dashBoard.setOnClickListener(this);
+        progressMap.setOnClickListener(this);
+        achievements.setOnClickListener(this);
+        account.setOnClickListener(this);
         DoneWritingAct.setOnClickListener(this);
 
         Intent ResultIntent = getIntent();
-        String Good = ResultIntent.getStringExtra("GOOD");
-        String Weird = ResultIntent.getStringExtra("WEIRD");
-        String Bad = ResultIntent.getStringExtra("BAD");
-        String Meh = ResultIntent.getStringExtra("MEH");
-        Blank.setText(Good);
-        Blank.setText(Weird);
-        Blank.setText(Bad);
-        Blank.setText(Meh);
-
+        Blank.setText(ResultIntent.getStringExtra("CHOICE"));
 
 
     }
@@ -58,6 +59,18 @@ public class WritingTask3Activity extends AppCompatActivity implements View.OnCl
             updateCounter=0;
             Intent DoneWritingActIntent = new Intent(this, CreativeActivity.class);
             startActivity(DoneWritingActIntent);
+        }
+        if (view == progressMap) {
+            Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
+            startActivity(ProgressButtonIntent);
+        }
+        if (view == dashBoard) {
+            Intent ProgressButtonIntent = new Intent(this, TracksActivity.class);
+            startActivity(ProgressButtonIntent);
+        }
+        if (view == account) {
+            Intent accountIntent = new Intent(this, ProgressActivity.class);
+            startActivity(accountIntent);
         }
     }
 

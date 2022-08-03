@@ -21,7 +21,7 @@
             android:id="@+id/InstructionsWritingAct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Write 3 examples of your feelings:"
+            android:text="Write 3 examples of how you feel:"
             android:textAlignment="center"
             android:textSize="30dp"
             android:textStyle="bold"
