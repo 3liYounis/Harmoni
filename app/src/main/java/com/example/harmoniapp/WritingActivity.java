@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class WritingActivity extends AppCompatActivity implements View.OnClickListener {
-    BottomNavigationItemView dashBoard, progressMap, achievements,account;
+    BottomNavigationItemView dashBoard, progressMap,account;
     RadioButton WeirdButton, BadButton, MehButton , GoodButton;
     TextView FillInBlank1, FillInBlank2;
     EditText Blank;
@@ -53,7 +53,6 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
         MehButton.setOnClickListener(this);
         dashBoard.setOnClickListener(this);
         progressMap.setOnClickListener(this);
-        achievements.setOnClickListener(this);
         account.setOnClickListener(this);
         ContinueButton.setOnClickListener(this);
 

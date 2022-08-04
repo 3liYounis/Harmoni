@@ -26,6 +26,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Random;
+
 public class DrawingActivity extends AppCompatActivity {
 
 
@@ -278,6 +280,20 @@ static  int updateCounter=0;
                 if (updateCounter == 0){
                     int actDone = snapshot.getValue(Integer.class);
                     ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").setValue(actDone+1);
+                    updateCounter++;
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        ref.child(firebaseCurrentUser.getUid()).child("coins").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (updateCounter == 1){
+                    int currentCoins = snapshot.getValue(Integer.class);
+                    ref.child(firebaseCurrentUser.getUid()).child("coins").setValue(currentCoins + 50);
                     updateCounter++;
                 }
             }
