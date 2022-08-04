@@ -8,8 +8,6 @@
     android:orientation="vertical"
     tools:context=".WritingActivity"
     android:background="@color/black">
-
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="411dp"
@@ -46,6 +44,8 @@
             android:id="@+id/WritingIntro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/demibold"
             android:gravity="center"
             android:text="Express your feelings"
             android:textColor="@color/white"
@@ -56,6 +56,8 @@
             android:id="@+id/InstructionsWritingAct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/demibold"
             android:gravity="center"
             android:text="Fill in the blanks according to your current mood !"
             android:textColor="@color/white"
@@ -76,8 +78,9 @@
                 android:inputType="text"
                 android:lines="2"
                 android:text="Yesterday I had a"
+                android:fontFamily="@font/demibold"
                 android:textColor="@color/white"
-                android:textSize="22dp" />
+                android:textSize="20dp" />
 
             <EditText
                 android:id="@+id/Blank"
@@ -100,8 +103,9 @@
                 android:inputType="text"
                 android:lines="2"
                 android:text="day"
+                android:fontFamily="@font/demibold"
                 android:textColor="@color/white"
-                android:textSize="22dp" />
+                android:textSize="20dp" />
         </LinearLayout>
 
 
@@ -123,6 +127,7 @@
                 android:scaleX="1"
                 android:scaleY="1"
                 android:text="weird"
+                android:fontFamily="@font/demibold"
                 android:textAlignment="center"
                 android:textSize="23dp"
                 android:textColor="@color/white" />
@@ -139,6 +144,7 @@
                 android:scaleX="1"
                 android:scaleY="1"
                 android:text="bad"
+                android:fontFamily="@font/demibold"
                 android:textAlignment="center"
                 android:textSize="23dp"
                 android:textColor="@color/white" />
@@ -156,6 +162,7 @@
                 android:scaleX="1"
                 android:scaleY="1"
                 android:text="meh"
+                android:fontFamily="@font/demibold"
                 android:textAlignment="center"
                 android:textSize="23dp"
                 android:textColor="@color/white"/>
@@ -173,6 +180,7 @@
                 android:scaleX="1"
                 android:scaleY="1"
                 android:text="good"
+                android:fontFamily="@font/demibold"
                 android:textAlignment="center"
                 android:textSize="23dp"
                 android:textColor="@color/white" />
@@ -181,13 +189,14 @@
 
         <ImageButton
             android:id="@+id/ContinueButton"
-            android:layout_width="188dp"
-            android:layout_height="58dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/harmoni_gradient"
+            android:background="@drawable/ic_continue_app"
             android:textAlignment="center"
             android:textColor="@color/black" />
 
@@ -195,13 +204,14 @@
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/DarkGray"
+        app:itemIconTint="@color/white"
+        app:itemIconSize="35dp"
+        android:background="@color/black"
         app:menu="@menu/bottom_nav_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

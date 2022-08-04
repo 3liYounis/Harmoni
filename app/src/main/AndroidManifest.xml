@@ -12,9 +12,6 @@
         <activity
             android:name=".WritingTask3Activity"
             android:exported="false" />
-        <activity
-            android:name=".WritingTask2Activity"
-            android:exported="false" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".AccountInfoActivity" />

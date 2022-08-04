@@ -27,7 +27,6 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/harmoni_logo" />
 
-
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
@@ -64,14 +63,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/DarkGray"
+        app:itemIconTint="@color/white"
+        app:itemIconSize="35dp"
+        android:background="@color/black"
         app:menu="@menu/bottom_nav_menu"/>
 
     <LinearLayout
         android:id="@+id/linearLayout7"
-        android:layout_width="358dp"
-        android:layout_height="365dp"
-        android:layout_marginBottom="104dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -81,64 +82,48 @@
 
 
         <TextView
-            android:id="@+id/TrackName"
-            android:layout_width="match_parent"
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/demibold"
             android:gravity="center"
             android:text="Choose a Track!"
+
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:textStyle="bold" />
 
-        <Button
+        <ImageButton
             android:id="@+id/DoodlingAct"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:backgroundTint="@color/Harmoni_Blue"
-            android:gravity="center"
-            android:text="Creative 🖌️🎨"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:background="@drawable/ic_creative_app" />
 
-        <Button
+        <ImageButton
             android:id="@+id/WritingAct"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:backgroundTint="@color/Harmoni_Red"
-            android:gravity="center"
-            android:text="Mindfulness 🧠🍃"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textAllCaps="false"/>
+            android:background="@drawable/ic_mindfulness_app"
+ />
 
-        <Button
+        <ImageButton
             android:id="@+id/DancingAct"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:backgroundTint="@color/Harmoni_Orange"
-            android:gravity="center"
-            android:text="Music 🎵"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textAllCaps="false"/>
+            android:background="@drawable/ic_musical_app"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/JammingAct"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:backgroundTint="@color/Harmoni_Green"
-            android:gravity="center"
-            android:text="Sport 🏐"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textAllCaps="false"/>
-
+            android:background="@drawable/ic_active_app"/>
 
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
-    Button signIn,signUp,google;
+    ImageButton signIn,signUp,google;
     TextView forgotPassword;
     TextInputLayout emailLayout, passwordLayout;
     TextInputEditText email,password;

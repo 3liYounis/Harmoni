@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="DashBoard"
-        android:id="@+id/dashBoard"
-        android:icon="@drawable/dashboard"/>
-    <item android:title="Progress"
-        android:icon="@drawable/pointer"
+
+    <item android:title=""
+        android:icon="@drawable/ic_progress_app"
         android:id="@+id/progressMap" />
-    <item android:title="Account"
+    <item android:title=""
+        android:id="@+id/dashBoard"
+        android:icon="@drawable/ic_home"/>
+    <item android:title=""
         android:id="@+id/account"
-        android:icon="@drawable/user"/>
+        android:icon="@drawable/ic_profile_app"/>
 </menu>

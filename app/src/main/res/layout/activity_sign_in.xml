@@ -28,8 +28,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="359dp"
-        android:layout_height="451dp"
+        android:layout_width="363dp"
+        android:layout_height="509dp"
         android:layout_marginBottom="84dp"
         android:gravity="center"
         android:orientation="vertical"
@@ -39,15 +39,17 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="Signing In ⬇️"
+            android:fontFamily="@font/demibold"
+            android:text="Sign in"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="52px"
-            android:textStyle="bold"/>
+            android:textSize="82px"
+            android:textStyle="bold" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -102,62 +104,53 @@
                 android:textColor="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
         <TextView
             android:id="@+id/forgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:text="Forgot Password?"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
-
-        <Button
-            android:id="@+id/signIn"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="@color/Harmoni_Blue"
-            android:outlineAmbientShadowColor="@color/black"
-            android:text="Sign In ⬆️"
-            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/signUp"
-            android:layout_width="150dp"
+
+        <ImageButton
+            android:id="@+id/signIn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="@color/Harmoni_Red"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_signin_app" />
+
+
+        <ImageButton
+            android:id="@+id/google_signIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_signin_google_app"
             android:outlineAmbientShadowColor="@color/black"
-            android:text="Sign Up ⬆️"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/google_signIn"
-            android:layout_width="229dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:backgroundTint="@color/sky_blue"
-            android:drawableLeft="@drawable/google_32"
-            android:elevation="8dp"
-            android:outlineAmbientShadowColor="@color/black"
-            android:text="Sign In with Google"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="88dp"
-            tools:layout_editor_absoluteY="494dp" />
-
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_sign_up2"
+        android:outlineAmbientShadowColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

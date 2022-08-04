@@ -30,6 +30,7 @@ public class WritingTask3Activity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writing_task3);
+        getSupportActionBar().hide();
         InstructionsWritingAct = findViewById(R.id.InstructionsWritingAct);
         DoneWritingAct = findViewById(R.id.DoneWritingAct);
         Edittext1 = findViewById(R.id.Edittext1);

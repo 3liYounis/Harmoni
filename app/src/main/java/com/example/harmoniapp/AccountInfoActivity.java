@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +23,7 @@ import com.squareup.picasso.Picasso;
 
 public class AccountInfoActivity extends AppCompatActivity implements View.OnClickListener {
     TextView name,email,coins,activitiesDone;
-    Button logout;
+    ImageButton logout;
     FirebaseAuth mAuth;
     FirebaseUser firebaseCurrentUser;
     FirebaseDatabase database;

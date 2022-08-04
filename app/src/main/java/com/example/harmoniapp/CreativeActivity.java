@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 
 public class CreativeActivity extends AppCompatActivity implements View.OnClickListener {
-    Button charlie,reflect;
+    ImageButton charlie,reflect;
     BottomNavigationItemView progressMap, dashBoard,account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

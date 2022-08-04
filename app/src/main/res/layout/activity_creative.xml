@@ -11,10 +11,12 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/DarkGray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:itemIconTint="@color/white"
+        app:itemIconSize="35dp"
+        android:background="@color/black"
         app:menu="@menu/bottom_nav_menu" />
 
     <LinearLayout
@@ -25,43 +27,38 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.38">
 
 
         <TextView
             android:id="@+id/TrackName"
-            android:layout_width="232dp"
+            android:layout_width="wrap_content"
             android:layout_height="72dp"
+            android:fontFamily="@font/demibold"
             android:gravity="center"
             android:text="Choose an Activity!"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:textStyle="bold" />
 
-        <Button
+        <ImageButton
             android:id="@+id/charlie"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@color/Harmoni_Blue"
-            android:gravity="center"
-            android:text="DOODLING"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:layout_marginTop="50dp"
+            android:background="@drawable/ic_doodling_app"
+            android:gravity="center" />
 
-        <Button
+        <ImageButton
             android:id="@+id/reflect"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@color/Harmoni_Red"
-            android:gravity="center"
-            android:text="JOURNAlLING "
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:layout_marginTop="50dp"
+            android:background="@drawable/ic_journal_app"
+            android:gravity="center" />
 
 
     </LinearLayout>

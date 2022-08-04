@@ -7,7 +7,26 @@
     tools:context=".WritingTask3Activity"
     android:background="@color/black">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="411dp"
+        android:layout_height="147dp"
+        android:backgroundTint="@color/black"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="602dp"
+            android:layout_height="162dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/harmoni_logo" />
+
+    </LinearLayout>
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -17,28 +36,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/frameLayout">
 
-            <TextView
-                android:id="@+id/InstructionsWritingAct"
-                android:layout_width="match_parent"
-                android:layout_height="88dp"
-                android:text="Write 3 examples of your feelings:"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="30dp"
-                android:textStyle="bold" />
-
 
             <LinearLayout
-                android:layout_width="330dp"
-                android:layout_height="61dp"
+                android:layout_width="361dp"
+                android:layout_height="64dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/fillinBlank1"
-                    android:layout_width="250dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/demibold"
                     android:gravity="left"
                     android:inputType="text"
                     android:lines="2"
@@ -48,8 +58,8 @@
 
                 <TextView
                     android:id="@+id/Blank"
-                    android:layout_width="70dp"
-                    android:layout_height="40dp"
+                    android:layout_width="81dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:editable="false"
                     android:ems="10"
@@ -70,6 +80,7 @@
                 android:inputType="text"
                 android:lines="2"
                 android:text="It was also"
+                android:fontFamily="@font/demibold"
                 android:textColor="@color/white"
                 android:textSize="22dp" />
 
@@ -102,10 +113,10 @@
 
             <ImageButton
                 android:id="@+id/DoneWritingAct"
-                android:layout_width="305dp"
-                android:layout_height="63dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/harmoni_gradient"
+                android:background="@drawable/ic_continue_app"
                 android:gravity="center"
                 android:text="I'm Done!"
                 android:textColor="@color/white"
@@ -114,23 +125,39 @@
 
         </LinearLayout>
 
-        <FrameLayout
-            android:id="@+id/frameLayout"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+
+        android:id="@+id/frameLayout"
+        android:layout_width="376dp"
+        android:layout_height="440dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/InstructionsWritingAct"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/demibold"
+            android:text="Fill in the blanks:"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </FrameLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/WhiteSmoke"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:itemIconTint="@color/white"
+            app:itemIconSize="35dp"
+            android:background="@color/black"
             app:menu="@menu/bottom_nav_menu">
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>

@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 public class WritingActivity extends AppCompatActivity implements View.OnClickListener {
     BottomNavigationItemView dashBoard, progressMap,account;
     RadioButton WeirdButton, BadButton, MehButton , GoodButton;
-    TextView FillInBlank1, FillInBlank2;
+    String userChoice ="";
     EditText Blank;
     ImageButton ContinueButton;
 
@@ -75,30 +75,26 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
             Intent accountIntent = new Intent(this, AccountInfoActivity.class);
             startActivity(accountIntent);
         }
-        if (view == ContinueButton) {
-            Intent ContinueButtonIntent = new Intent(this, WritingTask2Activity.class);
-            startActivity(ContinueButtonIntent);
-        }
         Intent it = new Intent(this,WritingTask3Activity.class);
         if (view == GoodButton) {
             Blank.setText("Good");
-            it.putExtra("CHOICE","good");
-            startActivity(it);
+            userChoice = "Good";
         }
         if (view == WeirdButton) {
             Blank.setText("Weird");
-            it.putExtra("CHOICE","weird");
-            startActivity(it);
+            userChoice = "Weird";
         }
         if (view == BadButton) {
             Blank.setText("Bad");
-            it.putExtra("CHOICE","bad");
-            startActivity(it);
+            userChoice = "Bad";
 
         }
         if (view == MehButton) {
             Blank.setText("Meh");
-            it.putExtra("CHOICE","meh");
+            userChoice = "Meh";
+        }
+        if (view == ContinueButton) {
+            it.putExtra("CHOICE",userChoice);
             startActivity(it);
         }
 

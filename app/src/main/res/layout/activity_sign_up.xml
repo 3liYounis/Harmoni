@@ -28,9 +28,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="379dp"
-        android:layout_height="443dp"
-        android:layout_marginBottom="76dp"
+        android:layout_width="378dp"
+        android:layout_height="543dp"
+        android:layout_marginBottom="60dp"
         android:gravity="center"
         android:orientation="vertical"
         app:flow_horizontalAlign="center"
@@ -46,10 +46,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="Signing Up ⬆️️"
+            android:fontFamily="@font/demibold"
+            android:text="Sign up"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="52px"
+            android:textSize="82px"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -65,9 +66,9 @@
             app:endIconMode="clear_text"
             app:endIconTint="@color/white"
             app:helperTextTextColor="@color/Red"
+            app:hintTextColor="@color/white"
             app:startIconDrawable="@drawable/user_black24"
-            app:startIconTint="@color/white"
-            app:hintTextColor="@color/white">
+            app:startIconTint="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/name"
@@ -132,33 +133,32 @@
                 android:textColor="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <ImageButton
             android:id="@+id/signUp"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:backgroundTint="@color/Harmoni_Orange"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_signup_app"
             android:outlineAmbientShadowColor="@color/black"
-            android:text="Sign Up ⬆️"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
 
-        <Button
+        <ImageButton
             android:id="@+id/google_signUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:backgroundTint="@color/sky_blue"
-            android:drawableLeft="@drawable/google_32"
-            android:elevation="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_signup_google_app"
             android:outlineAmbientShadowColor="@color/black"
-            android:text="Sign Up with Google"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
 
     </LinearLayout>
 

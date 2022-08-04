@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -28,11 +29,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Random;
 
-public class DrawingActivity extends AppCompatActivity {
+public class DrawingActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-static  int updateCounter=0;
+    static  int updateCounter=0;
     TextView textView,sectext;
+    BottomNavigationItemView dashBoard, progressMap,account;
     androidx.appcompat.widget.AppCompatButton Continue;
     int Page = 1;
     ImageView slider1;
@@ -168,7 +170,7 @@ static  int updateCounter=0;
                     image2.setAnimation(animation);
                     image2.setVisibility(View.INVISIBLE);
                     slider2.setImageResource(R.drawable.background_empty);
-                    slider3.setImageResource(R.drawable.background);
+                    //slider3.setImageResource(R.drawable.background);
                     animateTextViewTextChange(textView,600,"Draw the doodle\n" +
                             "you picked:");
                     animateTextViewTextChange(sectext,600,"Draw it 5 times\n" +
@@ -180,17 +182,12 @@ static  int updateCounter=0;
                     Pic3.setBackgroundResource(R.color.trans);
                     Pic1.setBackgroundResource(R.color.trans);
                     Pic4.setBackgroundResource(R.color.trans);
-                }else
-                if(Page == 3)
-                {
-                        updateDatabaseActDone();
-                        updateCounter=0;
-                        Intent it = new Intent(DrawingActivity.this,TracksActivity.class);
-                        startActivity(it);
+                    updateDatabaseActDone();
+                    updateCounter=0;
+                    Intent it = new Intent(DrawingActivity.this,TracksActivity.class);
+                    startActivity(it);
                 }
             }
-
-
         });
 
     }
@@ -201,6 +198,7 @@ static  int updateCounter=0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawing);
+        getSupportActionBar().hide();
         Continue = findViewById(R.id.nextt);
         slider1 = findViewById(R.id.slider1);
         Pic1 = findViewById(R.id.choice1);
@@ -208,13 +206,19 @@ static  int updateCounter=0;
         Pic3 = findViewById(R.id.choice3);
         Pic4 = findViewById(R.id.choice4);
         slider2 = findViewById(R.id.slider2);
-        slider3 = findViewById(R.id.slider3);
+        //slider3 = findViewById(R.id.slider3);
         textView = findViewById(R.id.Toptext);
         image1 = findViewById(R.id.image1);
         image2 = findViewById(R.id.image2);
         image3 = findViewById(R.id.image3);
         sectext = findViewById(R.id.sectext);
         TheChosenPic = 0;
+        dashBoard = findViewById(R.id.dashBoard);
+        progressMap = findViewById(R.id.progressMap);
+        account = findViewById(R.id.account);
+        dashBoard.setOnClickListener(this);
+        progressMap.setOnClickListener(this);
+        account.setOnClickListener(this);
 
     }
 
@@ -302,5 +306,21 @@ static  int updateCounter=0;
 
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view == dashBoard) {
+            Intent dashBoardIntent = new Intent(this, TracksActivity.class);
+            startActivity(dashBoardIntent);
+        }
+        if (view == progressMap) {
+            Intent progressMapIntent = new Intent(this, ProgressActivity.class);
+            startActivity(progressMapIntent);
+        }
+        if (view == account) {
+            Intent accountIntent = new Intent(this, AccountInfoActivity.class);
+            startActivity(accountIntent);
+        }
     }
 }
