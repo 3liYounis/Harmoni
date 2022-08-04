@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,15 +22,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class ProgressActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView ProgressHeadline;
-    ProgressBar Track1ProgressBar;
-    ImageView animated;
+    LottieAnimationView creative,mind,music,active;
     BottomNavigationItemView dashBoard, progressMap,account;
     FirebaseAuth mAuth;
     FirebaseUser firebaseCurrentUser;
     FirebaseDatabase database;
     DatabaseReference ref;
-
+    TextView username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,23 +38,36 @@ public class ProgressActivity extends AppCompatActivity implements View.OnClickL
         ref = database.getReference("Users");
         firebaseCurrentUser = mAuth.getCurrentUser();
         setContentView(R.layout.activity_progress);
-        Track1ProgressBar = findViewById(R.id.Track1ProgressBar);
-        ProgressHeadline = findViewById(R.id.ProgressHeadline);
         dashBoard = findViewById(R.id.dashBoard);
         progressMap = findViewById(R.id.progressMap);
         account = findViewById(R.id.account);
         dashBoard.setOnClickListener(this);
         progressMap.setOnClickListener(this);
         account.setOnClickListener(this);
-        animated = findViewById(R.id.animated);
+        creative = findViewById(R.id.creativeAnim);
+        mind = findViewById(R.id.mindAnim);
+        music = findViewById(R.id.musicAnim);
+        active = findViewById(R.id.creativeAnim);
+        username = findViewById(R.id.username);
+        ref.child(firebaseCurrentUser.getUid()).child("userName").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String name = snapshot.getValue(String.class);
+                username.setText(name);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
         ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int progress = snapshot.getValue(Integer.class)*50;
-                Track1ProgressBar.setProgress(progress);
-                if (progress == 100){
-                    AnimatedVectorDrawable drawable = (AnimatedVectorDrawable) animated.getDrawable();
-                    drawable.start();
+                if (progress >= 100){
+                    creative.setAnimationFromUrl("https://assets9.lottiefiles.com/packages/lf20_u0bexy8d.json");
+                    creative.animate();
                 }
             }
 

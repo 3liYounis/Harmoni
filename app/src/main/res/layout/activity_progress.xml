@@ -4,9 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".ProgressActivity"
-    android:background="@color/black">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="181dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:text="Sport 🏐"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/activeAnim"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_url="https://assets6.lottiefiles.com/private_files/lf30_3anincg1.json" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="181dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:text="Music 🎵"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/musicAnim"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_url="https://assets6.lottiefiles.com/private_files/lf30_3anincg1.json" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="181dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="124dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout8">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:text="Creative 🎨"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/creativeAnim"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_url="https://assets6.lottiefiles.com/private_files/lf30_3anincg1.json" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="181dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="124dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout8">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:text="Mindfulness 🧠"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            android:textStyle="bold" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/mindAnim"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_url="https://assets6.lottiefiles.com/private_files/lf30_3anincg1.json" />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -27,65 +153,45 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="390dp"
-        android:layout_height="424dp"
-        android:layout_marginBottom="96dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <ImageView
-            android:id="@+id/animated"
-            android:layout_width="204dp"
-            android:layout_height="158dp"
-            android:src="@drawable/avd_anim"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/loginTOP"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
-            android:id="@+id/ProgressHeadline"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="text"
-            android:text="Progress on Your Track:"
-            android:textColor="@color/white"
-            android:textSize="28sp" />
-
-
-        <ProgressBar
-            android:id="@+id/Track1ProgressBar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="373dp"
-            android:layout_height="wrap_content"
-            android:max="100"
-            android:progress="0"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="79dp"
-            android:layout_marginTop="40dp"/>
-
-
-    </LinearLayout>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/DarkGray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/DarkGray"
-        app:menu="@menu/bottom_nav_menu"/>
+        app:menu="@menu/bottom_nav_menu" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="233dp"
+        android:layout_height="98dp"
+        android:layout_marginBottom="412dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:text="Here are your badges "
+            android:textColor="@color/white"
+            android:textSize="40px" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="151dp"
+            android:layout_height="39dp"
+            android:text=""
+            android:textColor="@color/Harmoni_Blue"
+            android:textSize="40px"
+            android:textAlignment="center"/>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

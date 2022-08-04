@@ -30,6 +30,7 @@
         <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_progress.xml" value="0.3625" />
         <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.186" />
         <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1935" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/drawable/avd_anim.xml" value="0.162" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/drawable/harmoni_gradient.xml" value="0.1165" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_account_info.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_creative.xml" value="0.17552083333333332" />
@@ -38,7 +39,7 @@
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_forgot_password.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_jamming.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_mission_view.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_progress.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_progress.xml" value="0.22" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_in.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_up.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_splash_screen.xml" value="0.17552083333333332" />
