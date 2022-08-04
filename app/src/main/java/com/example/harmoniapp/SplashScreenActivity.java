@@ -22,7 +22,8 @@ public class SplashScreenActivity extends AppCompatActivity {
             public void run() {
                 firebaseCurrentUser = mAuth.getCurrentUser();
                 if(firebaseCurrentUser!=null){
-                    Intent it = new Intent(SplashScreenActivity.this, TracksActivity.class);
+                    // Change ittt:
+                    Intent it = new Intent(SplashScreenActivity.this, SignInActivity.class);
                     startActivity(it);
                 }
                 else{

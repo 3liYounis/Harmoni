@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 public class WritingTask2Activity extends AppCompatActivity implements View.OnClickListener{
 TextView InstructionsWritingAct;
 EditText Edittext1, Edittext2, Edittext3;
-BottomNavigationItemView progressMap, dashBoard, achievements,account;
+BottomNavigationItemView progressMap, dashBoard,account;
 ImageButton ContinueButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,11 +27,9 @@ ImageButton ContinueButton;
         Edittext3 = findViewById(R.id.Edittext3);
         dashBoard = findViewById(R.id.dashBoard);
         progressMap = findViewById(R.id.progressMap);
-        achievements = findViewById(R.id.goalsAchieved);
         account = findViewById(R.id.account);
         dashBoard.setOnClickListener(this);
         progressMap.setOnClickListener(this);
-        achievements.setOnClickListener(this);
         account.setOnClickListener(this);
         ContinueButton.setOnClickListener(this);
         Edittext1.setOnClickListener(this);
@@ -55,7 +53,7 @@ ImageButton ContinueButton;
             startActivity(ProgressButtonIntent);
         }
         if (view == account) {
-            Intent accountIntent = new Intent(this, ProgressActivity.class);
+            Intent accountIntent = new Intent(this, AccountInfoActivity.class);
             startActivity(accountIntent);
         }
     }

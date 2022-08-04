@@ -123,7 +123,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             }
                         }
                         else {
-                            Toast.makeText(SignUpActivity.this, "Sorry authentication failed.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

@@ -39,17 +39,14 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
         ContinueButton =  findViewById(R.id.ContinueButton);
         dashBoard = findViewById(R.id.dashBoard);
         progressMap = findViewById(R.id.progressMap);
-        achievements = findViewById(R.id.goalsAchieved);
         account = findViewById(R.id.account);
         WeirdButton = findViewById(R.id.WeirdButton);
         GoodButton = findViewById(R.id.GoodButton);
         BadButton = findViewById(R.id.BadButton);
         MehButton = findViewById(R.id.MehButton);
-        FillInBlank1 = findViewById(R.id.FillinBlank1);
-        FillInBlank2 = findViewById(R.id.FillinBlank2);
+//        FillInBlank1 = findViewById(R.id.FillinBlank1);
+//        FillInBlank2 = findViewById(R.id.FillinBlank2);
         Blank =  findViewById(R.id.Blank);
-
-
         GoodButton.setOnClickListener(this);
         WeirdButton.setOnClickListener(this);
         BadButton.setOnClickListener(this);
@@ -76,7 +73,7 @@ public class WritingActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(progressMapIntent);
         }
         if (view == account) {
-            Intent accountIntent = new Intent(this, ProgressActivity.class);
+            Intent accountIntent = new Intent(this, AccountInfoActivity.class);
             startActivity(accountIntent);
         }
         if (view == ContinueButton) {

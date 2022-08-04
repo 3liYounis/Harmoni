@@ -21,10 +21,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class ProgressActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView ProgressHeadline, ProgressTrack;
+    TextView ProgressHeadline;
     ProgressBar Track1ProgressBar;
     ImageView animated;
-    BottomNavigationItemView dashBoard, progressMap, achievements,account;
+    BottomNavigationItemView dashBoard, progressMap,account;
     FirebaseAuth mAuth;
     FirebaseUser firebaseCurrentUser;
     FirebaseDatabase database;
@@ -43,11 +43,9 @@ public class ProgressActivity extends AppCompatActivity implements View.OnClickL
         ProgressHeadline = findViewById(R.id.ProgressHeadline);
         dashBoard = findViewById(R.id.dashBoard);
         progressMap = findViewById(R.id.progressMap);
-        achievements = findViewById(R.id.goalsAchieved);
         account = findViewById(R.id.account);
         dashBoard.setOnClickListener(this);
         progressMap.setOnClickListener(this);
-        achievements.setOnClickListener(this);
         account.setOnClickListener(this);
         animated = findViewById(R.id.animated);
         ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").addValueEventListener(new ValueEventListener() {
@@ -79,7 +77,7 @@ public class ProgressActivity extends AppCompatActivity implements View.OnClickL
             startActivity(ProgressButtonIntent);
         }
         if (view == account) {
-            Intent accountIntent = new Intent(this, ProgressActivity.class);
+            Intent accountIntent = new Intent(this, AccountInfoActivity.class);
             startActivity(accountIntent);
         }
     }

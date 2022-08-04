@@ -11,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 
 public class CreativeActivity extends AppCompatActivity implements View.OnClickListener {
     Button charlie,reflect;
-    BottomNavigationItemView progressMap, dashBoard, achievements,account;
+    BottomNavigationItemView progressMap, dashBoard,account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +21,9 @@ public class CreativeActivity extends AppCompatActivity implements View.OnClickL
         reflect = findViewById(R.id.reflect);
         dashBoard = findViewById(R.id.dashBoard);
         progressMap = findViewById(R.id.progressMap);
-        achievements = findViewById(R.id.goalsAchieved);
         account = findViewById(R.id.account);
         dashBoard.setOnClickListener(this);
         progressMap.setOnClickListener(this);
-        achievements.setOnClickListener(this);
         account.setOnClickListener(this);
         charlie.setOnClickListener(this);
         reflect.setOnClickListener(this);
@@ -50,7 +48,7 @@ public class CreativeActivity extends AppCompatActivity implements View.OnClickL
             startActivity(ProgressButtonIntent);
         }
         if (view == account) {
-            Intent accountIntent = new Intent(this, ProgressActivity.class);
+            Intent accountIntent = new Intent(this, AccountInfoActivity.class);
             startActivity(accountIntent);
         }
     }

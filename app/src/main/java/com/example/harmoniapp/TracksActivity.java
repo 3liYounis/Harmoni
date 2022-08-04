@@ -15,7 +15,7 @@ public class TracksActivity extends AppCompatActivity implements  View.OnClickLi
     Button mindfulness, creative, sport, music;
     FirebaseAuth mAuth;
 
-    BottomNavigationItemView dashBoard, progressMap, achievements,account;
+    BottomNavigationItemView dashBoard, progressMap,account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,34 +28,24 @@ public class TracksActivity extends AppCompatActivity implements  View.OnClickLi
         music = findViewById(R.id.JammingAct);
         dashBoard = findViewById(R.id.dashBoard);
         progressMap = findViewById(R.id.progressMap);
-        achievements = findViewById(R.id.goalsAchieved);
         account = findViewById(R.id.account);
         dashBoard.setOnClickListener(this);
         progressMap.setOnClickListener(this);
-        achievements.setOnClickListener(this);
         account.setOnClickListener(this);
         mindfulness.setOnClickListener(this);
         creative.setOnClickListener(this);
         music.setOnClickListener(this);
         sport.setOnClickListener(this);
-
-    }
-
-
-    public void toast(String a,int sec) // short way for you kings
-    {
-        try {
-            Toast.makeText(getApplicationContext(), a, sec * 1000).show();
-
-        }catch (Exception e)
-        {
-        }
     }
 
     @Override
     public void onClick(View view) {
         if (view == progressMap) {
             Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
+            startActivity(ProgressButtonIntent);
+        }
+        if (view == account){
+            Intent ProgressButtonIntent = new Intent(this, AccountInfoActivity.class);
             startActivity(ProgressButtonIntent);
         }
 //        if (view == mindfulness) {

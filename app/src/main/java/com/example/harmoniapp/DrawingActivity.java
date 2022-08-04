@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Path;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,10 +18,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 public class DrawingActivity extends AppCompatActivity {
 
 
-
+static  int updateCounter=0;
     TextView textView,sectext;
     androidx.appcompat.widget.AppCompatButton Continue;
     int Page = 1;
@@ -171,8 +181,10 @@ public class DrawingActivity extends AppCompatActivity {
                 }else
                 if(Page == 3)
                 {
-
-
+                        updateDatabaseActDone();
+                        updateCounter=0;
+                        Intent it = new Intent(DrawingActivity.this,TracksActivity.class);
+                        startActivity(it);
                 }
             }
 
@@ -254,5 +266,25 @@ public class DrawingActivity extends AppCompatActivity {
                     public void onAnimationRepeat(Animator animation) {
                     }
                 }).start();
+    }
+    public void updateDatabaseActDone(){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference ref = database.getReference("Users");
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseCurrentUser = mAuth.getCurrentUser();
+        ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (updateCounter == 0){
+                    int actDone = snapshot.getValue(Integer.class);
+                    ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").setValue(actDone+1);
+                    updateCounter++;
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

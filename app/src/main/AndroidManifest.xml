@@ -20,13 +20,9 @@
         <activity android:name=".AccountInfoActivity" />
         <activity android:name=".TracksActivity" />
         <activity android:name=".DrawingActivity" />
-        <activity android:name=".DancingActivity" />
         <activity android:name=".ForgotPassword" />
-        <activity android:name=".Jamming" />
-        <activity android:name=".MissionViewActivity" />
         <activity android:name=".ProgressActivity" />
         <activity android:name=".WritingActivity" />
-        <activity android:name=".TestWritingActivity" />
         <activity
             android:name=".CreativeActivity"
             android:exported="false" />

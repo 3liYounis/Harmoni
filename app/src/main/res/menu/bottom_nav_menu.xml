@@ -6,9 +6,6 @@
     <item android:title="Progress"
         android:icon="@drawable/pointer"
         android:id="@+id/progressMap" />
-    <item android:title="Achievements"
-        android:id="@+id/goalsAchieved"
-        android:icon="@drawable/target"/>
     <item android:title="Account"
         android:id="@+id/account"
         android:icon="@drawable/user"/>

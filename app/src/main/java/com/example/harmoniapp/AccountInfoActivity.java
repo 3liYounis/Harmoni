@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +28,7 @@ public class AccountInfoActivity extends AppCompatActivity implements View.OnCli
     FirebaseDatabase database;
     DatabaseReference ref;
     ImageView profilePic;
+    BottomNavigationItemView progressMap, dashBoard,account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,12 @@ public class AccountInfoActivity extends AppCompatActivity implements View.OnCli
         coins = findViewById(R.id.coins);
         profilePic = findViewById(R.id.profilePic);
         activitiesDone = findViewById(R.id.activitiesDone);
+        dashBoard = findViewById(R.id.dashBoard);
+        progressMap = findViewById(R.id.progressMap);
+        account = findViewById(R.id.account);
+        dashBoard.setOnClickListener(this);
+        progressMap.setOnClickListener(this);
+        account.setOnClickListener(this);
         logout = findViewById(R.id.logout);
         logout.setOnClickListener(this);
         ref.child(firebaseCurrentUser.getUid()).child("userName").addValueEventListener(new ValueEventListener() {
@@ -108,6 +116,18 @@ public class AccountInfoActivity extends AppCompatActivity implements View.OnCli
             mAuth.signOut();
             Intent it = new Intent(AccountInfoActivity.this, SignInActivity.class);
             startActivity(it);
+        }
+        if (view == progressMap) {
+            Intent ProgressButtonIntent = new Intent(this, ProgressActivity.class);
+            startActivity(ProgressButtonIntent);
+        }
+        if (view == dashBoard) {
+            Intent ProgressButtonIntent = new Intent(this, TracksActivity.class);
+            startActivity(ProgressButtonIntent);
+        }
+        if (view == account) {
+            Intent accountIntent = new Intent(this, AccountInfoActivity.class);
+            startActivity(accountIntent);
         }
     }
 }

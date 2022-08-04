@@ -24,7 +24,7 @@ public class WritingTask3Activity extends AppCompatActivity implements View.OnCl
     TextView InstructionsWritingAct, fillinBlank1 ,fillinBlank2, Blank;
     EditText Edittext1;
     ImageButton DoneWritingAct;
-    BottomNavigationItemView progressMap, dashBoard, achievements,account;
+    BottomNavigationItemView progressMap, dashBoard,account;
     static  int updateCounter =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +38,9 @@ public class WritingTask3Activity extends AppCompatActivity implements View.OnCl
         Blank =  findViewById(R.id.Blank);
         dashBoard = findViewById(R.id.dashBoard);
         progressMap = findViewById(R.id.progressMap);
-        achievements = findViewById(R.id.goalsAchieved);
         account = findViewById(R.id.account);
         dashBoard.setOnClickListener(this);
         progressMap.setOnClickListener(this);
-        achievements.setOnClickListener(this);
         account.setOnClickListener(this);
         DoneWritingAct.setOnClickListener(this);
 
@@ -69,7 +67,7 @@ public class WritingTask3Activity extends AppCompatActivity implements View.OnCl
             startActivity(ProgressButtonIntent);
         }
         if (view == account) {
-            Intent accountIntent = new Intent(this, ProgressActivity.class);
+            Intent accountIntent = new Intent(this, AccountInfoActivity.class);
             startActivity(accountIntent);
         }
     }
