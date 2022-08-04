@@ -1,0 +1,325 @@
+Index: .idea/codeStyles/Project.xml
+===================================================================
+diff --git a/.idea/codeStyles/Project.xml b/.idea/codeStyles/Project.xml
+deleted file mode 100644
+--- a/.idea/codeStyles/Project.xml	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
++++ /dev/null	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
+@@ -1,117 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <code_scheme name="Project" version="173">
+-    <codeStyleSettings language="XML">
+-      <option name="FORCE_REARRANGE_MODE" value="1" />
+-      <indentOptions>
+-        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+-      </indentOptions>
+-      <arrangement>
+-        <rules>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:android</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:id</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>style</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>ANDROID_ATTRIBUTE_ORDER</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-        </rules>
+-      </arrangement>
+-    </codeStyleSettings>
+-  </code_scheme>
+-</component>
+\ No newline at end of file
+Index: .idea/codeStyles/codeStyleConfig.xml
+===================================================================
+diff --git a/.idea/codeStyles/codeStyleConfig.xml b/.idea/codeStyles/codeStyleConfig.xml
+deleted file mode 100644
+--- a/.idea/codeStyles/codeStyleConfig.xml	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
++++ /dev/null	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
+@@ -1,5 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <state>
+-    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
+-  </state>
+-</component>
+\ No newline at end of file
+Index: .idea/.gitignore
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
++++ /dev/null	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
+@@ -1,3 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"DesignSurface\">\r\n    <option name=\"filePathToZoomLevelMap\">\r\n      <map>\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/drawable/harmoni_gradient.xml\" value=\"0.345\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/drawable/ic_baseline_home_24.xml\" value=\"0.3635\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/drawable/ic_baseline_redeem_24.xml\" value=\"0.3635\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/drawable/round_btn.xml\" value=\"0.345\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_account_info.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_creative.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_dancing.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_drawing.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_forgot_password.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_home_current.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_jamming.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_main.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_mission_view.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_progress.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_sign_in.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_sign_up.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_splash_screen.xml\" value=\"0.2722222222222222\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_test_writing.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_tracks.xml\" value=\"0.33\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_writing.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_account.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_achievements.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_dashboard.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_progress.xml\" value=\"0.3625\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml\" value=\"0.186\" />\r\n        <entry key=\"..\\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml\" value=\"0.1935\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/drawable/harmoni_gradient.xml\" value=\"0.1165\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_account_info.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_creative.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_dancing.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_drawing.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_forgot_password.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_jamming.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_mission_view.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_progress.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_in.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_up.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_splash_screen.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_test_writing.xml\" value=\"0.12986111111111112\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_tracks.xml\" value=\"0.14666666666666667\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing.xml\" value=\"0.3333333333333333\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing_task2.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing_task3.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_drawing.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_progress.xml\" value=\"0.17552083333333332\" />\r\n        <entry key=\"..\\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_sign_in.xml\" value=\"0.1\" />\r\n        <entry key=\"..\\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_sign_up.xml\" value=\"0.22\" />\r\n        <entry key=\"..\\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_test_writing.xml\" value=\"0.16666666666666666\" />\r\n        <entry key=\"..\\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_writing.xml\" value=\"0.22\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectResources\">\r\n    <resource url=\"http://relaxng.org/ns/compatibility/annotations/1.0\" location=\"$PROJECT_DIR$\" />\r\n    <resource url=\"http://schemas.android.com/apk/res/android\" location=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"Android Studio default JDK\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
++++ b/.idea/misc.xml	(date 1659449237846)
+@@ -1,65 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="DesignSurface">
+-    <option name="filePathToZoomLevelMap">
+-      <map>
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/drawable/harmoni_gradient.xml" value="0.345" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.3635" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/drawable/ic_baseline_redeem_24.xml" value="0.3635" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/drawable/round_btn.xml" value="0.345" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_account_info.xml" value="0.33" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_creative.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_dancing.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_drawing.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_home_current.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_jamming.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_mission_view.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_progress.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.2722222222222222" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_test_writing.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_tracks.xml" value="0.33" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_writing.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_account.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_achievements.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_dashboard.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_progress.xml" value="0.3625" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.186" />
+-        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1935" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/drawable/harmoni_gradient.xml" value="0.1165" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_account_info.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_creative.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_dancing.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_drawing.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_forgot_password.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_jamming.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_mission_view.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_progress.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_in.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_up.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_splash_screen.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_test_writing.xml" value="0.12986111111111112" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_tracks.xml" value="0.14666666666666667" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing.xml" value="0.3333333333333333" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing_task2.xml" value="0.1" />
+-        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing_task3.xml" value="0.1" />
+-        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_drawing.xml" value="0.16666666666666666" />
+-        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_progress.xml" value="0.17552083333333332" />
+-        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
+-        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+-        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_test_writing.xml" value="0.16666666666666666" />
+-        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_writing.xml" value="0.22" />
+-      </map>
+-    </option>
+-  </component>
+-  <component name="ProjectResources">
+-    <resource url="http://relaxng.org/ns/compatibility/annotations/1.0" location="$PROJECT_DIR$" />
+-    <resource url="http://schemas.android.com/apk/res/android" location="$PROJECT_DIR$" />
+-  </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
++++ b/.idea/vcs.xml	(date 1659449237862)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: app/src/main/java/com/example/harmoniapp/DrawingActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.harmoniapp;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.animation.Animator;\r\nimport android.animation.AnimatorListenerAdapter;\r\nimport android.animation.ObjectAnimator;\r\nimport android.graphics.Color;\r\nimport android.graphics.Path;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.view.animation.Animation;\r\nimport android.view.animation.AnimationUtils;\r\nimport android.widget.Button;\r\nimport android.widget.ImageView;\r\nimport android.widget.TextView;\r\nimport android.widget.Toast;\r\n\r\npublic class DrawingActivity extends AppCompatActivity {\r\n\r\n\r\n\r\n    TextView textView,sectext;\r\n    androidx.appcompat.widget.AppCompatButton Continue;\r\n    int Page = 1;\r\n    ImageView slider1;\r\n    ImageView slider2;\r\n    ImageView slider3;\r\n    ImageView image1;\r\n    ImageView image2;\r\n    ImageView image3;\r\n    Button Pic1,Pic2,Pic3,Pic4;\r\n    Animation animation;\r\n    int TheChosenPic ;\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    @Override\r\n    protected void onStart() {\r\n        super.onStart();\r\n\r\n\r\n\r\n\r\n        Pic1.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                TheChosenPic  =1;\r\n                Pic1.setBackgroundResource(R.drawable.background_empty);\r\n                Pic2.setBackgroundResource(R.color.trans);\r\n                Pic3.setBackgroundResource(R.color.trans);\r\n                Pic4.setBackgroundResource(R.color.trans);\r\n                if(!Continue.isShown()) {\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.another_anim);\r\n                    Continue.setAnimation(animation);\r\n                    Continue.setVisibility(View.VISIBLE);\r\n                }\r\n\r\n            }\r\n        });\r\n        Pic2.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                TheChosenPic  =2;\r\n                Pic2.setBackgroundResource(R.drawable.background_empty);\r\n                Pic1.setBackgroundResource(R.color.trans);\r\n                Pic3.setBackgroundResource(R.color.trans);\r\n                Pic4.setBackgroundResource(R.color.trans);\r\n                if(!Continue.isShown()) {\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.another_anim);\r\n                    Continue.setAnimation(animation);\r\n                    Continue.setVisibility(View.VISIBLE);\r\n                }\r\n            }\r\n        });\r\n        Pic3.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                TheChosenPic  =3;\r\n                Pic3.setBackgroundResource(R.drawable.background_empty);\r\n                Pic2.setBackgroundResource(R.color.trans);\r\n                Pic1.setBackgroundResource(R.color.trans);\r\n                Pic4.setBackgroundResource(R.color.trans);\r\n                animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.another_anim);\r\n                if(!Continue.isShown()) {\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.another_anim);\r\n                    Continue.setAnimation(animation);\r\n                    Continue.setVisibility(View.VISIBLE);\r\n                }\r\n            }\r\n        });\r\n        Pic4.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                TheChosenPic  =4;\r\n                Pic4.setBackgroundResource(R.drawable.background_empty);\r\n                Pic2.setBackgroundResource(R.color.trans);\r\n                Pic3.setBackgroundResource(R.color.trans);\r\n                Pic1.setBackgroundResource(R.color.trans);\r\n                if(!Continue.isShown()) {\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.another_anim);\r\n                    Continue.setAnimation(animation);\r\n                    Continue.setVisibility(View.VISIBLE);\r\n                }\r\n            }\r\n        });\r\n        Continue.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n\r\n\r\n\r\n                if(Page == 1)\r\n                {\r\n                    Page++;\r\n                    slider1.setImageResource(R.drawable.background_empty);\r\n                    slider2.setImageResource(R.drawable.background);\r\n                    animateTextViewTextChange(textView,600,\"What doodle best\\n\" +\r\n                            \"describes your mood:\");\r\n                    animateTextViewTextChange(sectext,600,\"\");\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bottom_anim);\r\n                    image1.setAnimation(animation);\r\n                    image1.setVisibility(View.INVISIBLE);\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bottom_anim);\r\n                    Continue.setAnimation(animation);\r\n                    Continue.setVisibility(View.INVISIBLE);\r\n                    Continue.setClickable(true);\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.another_anim);\r\n                    image2.setAnimation(animation);\r\n                    image2.setVisibility(View.VISIBLE);\r\n                    Pic1.setClickable(true);\r\n                    Pic2.setClickable(true);\r\n                    Pic3.setClickable(true);\r\n                    Pic4.setClickable(true);\r\n                    Pic1.setVisibility(View.VISIBLE);\r\n                    Pic2.setVisibility(View.VISIBLE);\r\n                    Pic3.setVisibility(View.VISIBLE);\r\n                    Pic4.setVisibility(View.VISIBLE);\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bottom_anim);\r\n                    Continue.setAnimation(animation);\r\n                    Continue.setVisibility(View.INVISIBLE);\r\n                }else\r\n                if(Page == 2)\r\n                {\r\n                    Pic1.setClickable(false);\r\n                    Pic2.setClickable(false);\r\n                    Pic3.setClickable(false);\r\n                    Pic4.setClickable(false);\r\n                    Page++;\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.zoom_out);\r\n                    image2.setAnimation(animation);\r\n                    image2.setVisibility(View.INVISIBLE);\r\n                    slider2.setImageResource(R.drawable.background_empty);\r\n                    slider3.setImageResource(R.drawable.background);\r\n                    animateTextViewTextChange(textView,600,\"Draw the doodle\\n\" +\r\n                            \"you picked:\");\r\n                    animateTextViewTextChange(sectext,600,\"Draw it 5 times\\n\" +\r\n                            \"on a sheet of paper\");\r\n                    animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.another_anim);\r\n                    image3.setAnimation(animation);\r\n                    image3.setVisibility(View.VISIBLE);\r\n                    Pic2.setBackgroundResource(R.color.trans);\r\n                    Pic3.setBackgroundResource(R.color.trans);\r\n                    Pic1.setBackgroundResource(R.color.trans);\r\n                    Pic4.setBackgroundResource(R.color.trans);\r\n                }else\r\n                if(Page == 3)\r\n                {\r\n\r\n\r\n                }\r\n            }\r\n\r\n\r\n        });\r\n\r\n    }\r\n\r\n\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_drawing);\r\n        Continue = findViewById(R.id.nextt);\r\n        slider1 = findViewById(R.id.slider1);\r\n        Pic1 = findViewById(R.id.choice1);\r\n        Pic2 = findViewById(R.id.choice2);\r\n        Pic3 = findViewById(R.id.choice3);\r\n        Pic4 = findViewById(R.id.choice4);\r\n        slider2 = findViewById(R.id.slider2);\r\n        slider3 = findViewById(R.id.slider3);\r\n        textView = findViewById(R.id.Toptext);\r\n        image1 = findViewById(R.id.image1);\r\n        image2 = findViewById(R.id.image2);\r\n        image3 = findViewById(R.id.image3);\r\n        sectext = findViewById(R.id.sectext);\r\n        TheChosenPic = 0;\r\n\r\n    }\r\n\r\n    private void crossfade(ImageView v) {\r\n\r\n        // Set the content view to 0% opacity but visible, so that it is visible\r\n        // (but fully transparent) during the animation.\r\n        v.setAlpha(0f);\r\n        v.setVisibility(View.VISIBLE);\r\n\r\n        // Animate the content view to 100% opacity, and clear any animation\r\n        // listener set on the view.\r\n        v.animate()\r\n                .alpha(1f)\r\n                .setDuration(600)\r\n                .setListener(null);\r\n\r\n        // Animate the loading view to 0% opacity. After the animation ends,\r\n        // set its visibility to GONE as an optimization step (it won't\r\n        // participate in layout passes, etc.)\r\n        v.animate()\r\n                .alpha(0f)\r\n                .setDuration(6000)\r\n                .setListener(new AnimatorListenerAdapter() {\r\n                    @Override\r\n                    public void onAnimationEnd(Animator animation) {\r\n                        v.setVisibility(View.GONE);\r\n                    }\r\n                });\r\n    }\r\n    public static void animateTextViewTextChange(final TextView textView,\r\n                                                 final int duration, final String newText) {\r\n        textView.animate().alpha(0f).setDuration(duration)\r\n                .setListener(new Animator.AnimatorListener() {\r\n                    @Override\r\n                    public void onAnimationEnd(Animator animation) {\r\n                        textView.setText(newText);\r\n                        textView.animate().alpha(1f).setDuration(duration)\r\n                                .start();\r\n                    }\r\n\r\n                    @Override\r\n                    public void onAnimationStart(Animator animation) {\r\n                    }\r\n\r\n                    @Override\r\n                    public void onAnimationCancel(Animator animation) {\r\n                    }\r\n\r\n                    @Override\r\n                    public void onAnimationRepeat(Animator animation) {\r\n                    }\r\n                }).start();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/harmoniapp/DrawingActivity.java b/app/src/main/java/com/example/harmoniapp/DrawingActivity.java
+--- a/app/src/main/java/com/example/harmoniapp/DrawingActivity.java	(revision 8fee2a92984ac062bad34899182c36e306eb4b54)
++++ b/app/src/main/java/com/example/harmoniapp/DrawingActivity.java	(date 1659437364000)
+@@ -5,9 +5,11 @@
+ import android.animation.Animator;
+ import android.animation.AnimatorListenerAdapter;
+ import android.animation.ObjectAnimator;
++import android.content.Intent;
+ import android.graphics.Color;
+ import android.graphics.Path;
+ import android.os.Bundle;
++import android.support.annotation.NonNull;
+ import android.view.View;
+ import android.view.animation.Animation;
+ import android.view.animation.AnimationUtils;
+@@ -16,10 +18,18 @@
+ import android.widget.TextView;
+ import android.widget.Toast;
+ 
++import com.google.firebase.auth.FirebaseAuth;
++import com.google.firebase.auth.FirebaseUser;
++import com.google.firebase.database.DataSnapshot;
++import com.google.firebase.database.DatabaseError;
++import com.google.firebase.database.DatabaseReference;
++import com.google.firebase.database.FirebaseDatabase;
++import com.google.firebase.database.ValueEventListener;
++
+ public class DrawingActivity extends AppCompatActivity {
+ 
+ 
+-
++static  int updateCounter=0;
+     TextView textView,sectext;
+     androidx.appcompat.widget.AppCompatButton Continue;
+     int Page = 1;
+@@ -171,8 +181,11 @@
+                 }else
+                 if(Page == 3)
+                 {
+-
+-
++                        updateDatabaseActDone();
++                        updateCounter=0;
++                        
++                        Intent it = new Intent(DrawingActivity.this,TracksActivity.class);
++                        startActivity(it);
+                 }
+             }
+ 
+@@ -255,4 +268,24 @@
+                     }
+                 }).start();
+     }
++    public void updateDatabaseActDone(){
++        FirebaseDatabase database = FirebaseDatabase.getInstance();
++        DatabaseReference ref = database.getReference("Users");
++        FirebaseAuth mAuth = FirebaseAuth.getInstance();
++        FirebaseUser firebaseCurrentUser = mAuth.getCurrentUser();
++        ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").addValueEventListener(new ValueEventListener() {
++            @Override
++            public void onDataChange(@NonNull DataSnapshot snapshot) {
++                if (updateCounter == 0){
++                    int actDone = snapshot.getValue(Integer.class);
++                    ref.child(firebaseCurrentUser.getUid()).child("activitiesDone").setValue(actDone+1);
++                    updateCounter++;
++                }
++            }
++            @Override
++            public void onCancelled(@NonNull DatabaseError error) {
++
++            }
++        });
++    }
+ }
+\ No newline at end of file
