@@ -149,6 +149,7 @@
 
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/demibold"
@@ -157,7 +158,7 @@
         android:textColor="@color/white"
         android:textSize="55px"
         app:layout_constraintEnd_toStartOf="@+id/endimage"
-        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="@+id/startimage"
         app:layout_constraintTop_toTopOf="@id/toptext1" />
 
@@ -183,7 +184,7 @@
         android:src="@drawable/doodle_1"
         app:layout_constraintBottom_toBottomOf="@id/bottomimage"
         app:layout_constraintEnd_toEndOf="@id/endimage"
-        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="@id/startimage"
         app:layout_constraintTop_toTopOf="@id/topimage"
         app:layout_constraintVertical_bias="0.0" />
@@ -221,7 +222,7 @@
         android:id="@+id/sectext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="4dp"
         android:fontFamily="@font/demibold"
         android:gravity="center"
         android:text="Draw it 3 times \n on a sheet of paper"
@@ -559,9 +560,8 @@
         android:textColor="@color/white"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/starttext2"
-        app:layout_constraintTop_toTopOf="@id/toptext2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toptext2" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

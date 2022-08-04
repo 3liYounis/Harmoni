@@ -25,7 +25,7 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="31dp"
-            android:text="Sport 🏐"
+            android:text="Sport "
             android:textColor="@color/white"
             android:textSize="40px"
             android:textStyle="bold" />
@@ -56,7 +56,7 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="31dp"
-            android:text="Music 🎵"
+            android:text="Music "
             android:textColor="@color/white"
             android:textSize="40px"
             android:textStyle="bold" />
@@ -87,7 +87,7 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="31dp"
-            android:text="Creative 🎨"
+            android:text="Creative "
             android:textColor="@color/white"
             android:textSize="40px"
             android:textStyle="bold" />
@@ -118,7 +118,7 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="31dp"
-            android:text="Mindfulness 🧠"
+            android:text="Mindfulness "
             android:textColor="@color/white"
             android:textSize="40px"
             android:textStyle="bold" />
@@ -193,7 +193,7 @@
             android:layout_height="39dp"
             android:text=""
             android:textColor="@color/Harmoni_Blue"
-            android:textSize="40px"
+            android:textSize="50px"
             android:textAlignment="center"/>
     </LinearLayout>
 

@@ -3,41 +3,64 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable-v24/ic_creative_app.xml" value="0.1215" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable-v24/ic_sign_up2.xml" value="0.156" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_gmail_app.xml" value="0.146" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_goal_app.xml" value="0.146" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_group_24.xml" value="0.1215" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_header_app.xml" value="0.133" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_home.xml" value="0.1215" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_journal_app.xml" value="0.146" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_mindfulness_app.xml" value="0.1215" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_mindfulness_locked.xml" value="0.1215" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_money_app.xml" value="0.146" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_profile_app.xml" value="0.133" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_progress.xml" value="0.1215" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_progress_app.xml" value="0.133" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_resetpassword_app.xml" value="0.1355" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_signin_app.xml" value="0.1355" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_signup_app.xml" value="0.1355" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/drawable/ic_signup_google_app.xml" value="0.1" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_account_info.xml" value="0.2" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_creative.xml" value="0.2" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_dancing.xml" value="0.2" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_drawing.xml" value="0.22" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_mission_view.xml" value="0.2" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_progress.xml" value="0.1" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_sign_in.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_splash_screen.xml" value="0.1609375" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_tracks.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_writing.xml" value="0.1" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_writing_task2.xml" value="0.2" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/layout/activity_writing_task3.xml" value="0.1" />
-        <entry key="..\:/Users/blehe/Downloads/Harmoni/app/src/main/res/menu/bottom_nav_menu.xml" value="0.12239583333333333" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/drawable/harmoni_gradient.xml" value="0.345" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.3635" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/drawable/ic_baseline_redeem_24.xml" value="0.3635" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/drawable/round_btn.xml" value="0.345" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_account_info.xml" value="0.33" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_creative.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_dancing.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_drawing.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_home_current.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_jamming.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_mission_view.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_progress.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_sign_in.xml" value="0.33" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.2722222222222222" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_test_writing.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_tracks.xml" value="0.33" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/layout/activity_writing.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_account.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_achievements.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_dashboard.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/menu/bottom_nav_menu_progress.xml" value="0.3625" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.186" />
+        <entry key="..\:/Android Studio/HarmoniApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1935" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/drawable/avd_anim.xml" value="0.162" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/drawable/harmoni_gradient.xml" value="0.1165" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_account_info.xml" value="0.1" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_creative.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_dancing.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_drawing.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_forgot_password.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_jamming.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_mission_view.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_progress.xml" value="0.1" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_in.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_sign_up.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_splash_screen.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_test_writing.xml" value="0.12986111111111112" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_tracks.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing_task2.xml" value="0.1" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/layout/activity_writing_task3.xml" value="0.1" />
+        <entry key="..\:/Users/Student/AndroidStudioProjects/Harmoni/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_drawing.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_progress.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
+        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_test_writing.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Student/Documents/GitHub/Harmoni/app/src/main/res/layout/activity_writing.xml" value="0.22" />
       </map>
     </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://relaxng.org/ns/compatibility/annotations/1.0" location="$PROJECT_DIR$" />
+    <resource url="http://schemas.android.com/apk/res/android" location="$PROJECT_DIR$" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
